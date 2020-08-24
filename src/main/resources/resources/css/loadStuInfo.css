@@ -1,0 +1,77 @@
+#container {
+	height: 923px;
+	background: #fff;
+	margin-bottom: 20px;
+}
+.content {
+	height: 173px;
+	border-bottom: 1px solid #e9e8e8;
+}
+form ul {
+	margin-left: 8px;
+	margin-top: 34px;
+}
+.table {
+	width: 1126px;
+	height: 500px;
+	margin:30px 37px;
+}
+.slects {
+	margin-left: 0;
+}
+
+td {
+	width: 225px;
+}
+li {
+	width: 355px;
+	float: left;
+}
+.slects span {
+	width: 72px;
+	font-size: 16px;
+	color: #444444;
+}
+.file {
+	display: inline-block;
+	width: 662px;
+	height: 52px;
+	border: 1px solid #dfdfdf;
+	margin: 30px 0px;
+	padding-left: -37px;
+
+}
+.fileP {
+	position: absolute;
+	line-height: 50px;
+	margin-left: 1%;
+}
+.btn {
+	margin-left: 84px;
+}
+.file input {
+	width: 661px;
+	position: absolute;
+	left:0;
+	top:0;
+	zoom: 1;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	font-size: 20px;
+	/*margin-left: -240px;*/
+	border: 1px solid blue;
+}
+.slects {
+	width: 100%;
+}
+.fileChoice {
+	outline: none;
+	width: 88px;
+	position: relative;
+	height: 38px;
+	top: -44px;
+	left: 185px;
+}
+.btnPurple{
+	background-color: #381c4f;
+}

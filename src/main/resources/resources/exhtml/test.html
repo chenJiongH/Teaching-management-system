@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <script src="../jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../exjs/swiper.min.js"></script>
+
+    <style type="text/css">
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container" >
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar" ></div>
+</div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical', // 垂直切换选项
+        mousewheel: true,
+        freeMode: true,
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+    })
+
+    mySwiper.scrollbar.$dragEl.css('background','rgb(158, 33, 33)');
+</script>
+</html>

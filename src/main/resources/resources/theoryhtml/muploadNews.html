@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员登录新闻上传</title>
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/lang/zh-cn/zh-cn.js"></script>
+
+	<script type="text/javascript">
+		var ue;
+        $(function ()  {
+            ue = UE.getEditor('editor', { 
+               autoHeightEnabled: false,//设置不自动调整高度
+                autoFloatEnabled:false // 设置工具栏不浮动度 
+            });
+            ue.ready(function () {
+				$("#edui1_message_holder").css("display", "none");
+				$("#edui1_bottombar").css("display", "none");
+            });
+        })
+	</script>
+	<script type="text/javascript" src="../theoryjs/base.js"></script>
+	<script type="text/javascript" src="../theoryjs/muploadNews.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/sendNews.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/uploadNotice.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+			    <img src="../images/logo1.png" alt="">
+			    <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+		    </div>
+		    <a class="backMain" href="#">
+		    	<img src="../images/首页red.png">
+		        <p>返回主页</p>
+		    </a>
+		</div>
+	</div>
+	<div id="selection">
+		<p>
+			<span>主页</span>
+			>
+			<span>&nbsp;&nbsp;新闻上传</span>
+		</p>
+	</div>     
+	<div id="container">
+		<span id="message" style="top: 57%;"></span>
+		<div class="sideBar">
+			<ul>
+				<li>
+					<a href="meditTeacherInfo.html">
+					<img src="../images/教师grey.png" alt="">
+					<span>教师信息修改</span>
+				    </a>
+				</li>
+				<li>
+					<a href="mCourseInfoEdit.html">
+						<img src="../images/课程grey.png">
+					    <span>课程信息修改</span>
+				    </a>	
+				</li>
+				<li>
+					<a href="muploadView.html">
+					<img src="../images/视频grey.png" alt="">
+					<span>风景上传</span>
+				    </a>
+				</li>
+				<li>
+					<a href="muploaProress.html">
+						<img src="../images/kecheng-.png" alt="">
+					<span>进度表上传</span>
+				   </a>
+					
+				</li>
+				<li>
+					<a href="muploadNotice.html"><img src="../images/通知grey.png" alt="">
+					<span>通知上传</span></a>
+					
+				</li>
+				<li>
+					<a href="muploadVideo.html"><img src="../images/视频grey.png" alt="">
+					<span>视频上传</span></a>
+					
+				</li>
+				<li>
+					<a href="muploadNews.html"><img src="../images/修改red.png" alt="">
+					<span class="current">新闻上传</span></a>
+					
+				</li>
+				<li>
+					<a href="#"><img src="../images/数据grey.png" alt="">
+					<span>数据维护</span></a>
+					
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="title1">新闻上传</div>
+			<form class="video_f">
+				<ul>
+					<li>
+						<span>学期：</span>
+						<select name="term">
+							<option hidden="hidden"></option>
+						</select>
+						<img src="../images/箭头.png">
+					</li>
+					<li>
+						<span>课程名：</span>
+						<select name="cname">
+							<option hidden="hidden"></option>
+						</select>
+						<img src="../images/箭头.png">
+					</li>
+					<li>
+						<span>新闻标题：</span>
+						<input type="text" id="noticeTi" name="title">
+					</li>
+					<li>
+						<span>新闻内容：</span>
+						<div id="editor" style="width: 890px;height: 505px;" ></div>
+					</li>
+					<li>
+						<input style="display: none;" type="text" name="content">
+					</li>
+					<li>
+						<input style="display: none;" type="text" name="summary">
+					</li>
+				</ul>
+				<button type="button" class="btn" onclick="newsUpload()">确认上传</button>
+			</form>
+			<div class="t_div">
+				<table>
+				    <tr>
+				    	<th>序号</th>
+				    	<th>新闻标题</th>
+				    	<th>课程名</th>
+				    	<th>学期</th>
+				    	<th>操作</th>
+				    </tr>
+				  
+			   </table>
+			</div>
+			<ul class="sequence">
+	    	    <li class="special fontColor">上一页</li>
+	    	    <li class="current">1</li>
+	    	    <li>2</li>
+	    	    <li>3</li>
+	    	    <li>4</li>
+	    	    <li>5</li>
+	    	    <li>6</li>
+	    	    <li>7</li>
+	    	    <li>8</li>
+	    	    <li>9</li>
+	    	    <li>10</li>
+	    	    <li class="special">下一页</li>
+	        </ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="f_div">
+			<div class="link">
+			    常用链接：
+			    <a href="#" id="emial">校领导信箱</a>
+			    <a href="#" id="phone">校内电话</a>
+			    <a href="#" id="buy">招标采购网</a>
+			    <a href="#" id="lab">图书馆</a>
+			    <a href="#" id="fznews">福州大学报</a>
+		    </div>
+		    <div class="address">
+		    	&copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+		    </div>
+		</div>
+	</div>　　　　
+</body>
+</html>

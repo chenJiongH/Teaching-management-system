@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.cjh.example.mappers.ExProblemMapper">
+  <resultMap id="BaseResultMap" type="per.cjh.example.domain.ExProblem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="term" jdbcType="VARCHAR" property="term" />
+    <id column="cname" jdbcType="VARCHAR" property="cname" />
+    <id column="pname" jdbcType="VARCHAR" property="pname" />
+    <result column="onePro" jdbcType="VARCHAR" property="onepro" />
+    <result column="twoPro" jdbcType="VARCHAR" property="twopro" />
+    <result column="threePro" jdbcType="VARCHAR" property="threepro" />
+  </resultMap>
+</mapper>

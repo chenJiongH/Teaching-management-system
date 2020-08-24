@@ -1,0 +1,60 @@
+#container .edit_title {
+	padding: 33px 37px;
+	border-bottom: 1px solid #e9e8e8; 
+}
+/*编辑小标题开始*/
+.edit_title span{
+	font-size: 20px;
+	font-weight: bold;
+}
+.edit_title span:first-child {
+	font-family: "宋体";
+	color: #000;
+	font-weight: bold;
+	padding-right: 10px;
+}
+.edit_title span:nth-child(2){
+	color: #381C4F;
+}
+.edit_title span:last-child {
+	color: #A42E2E;
+}
+/*编辑小标题结束*/
+/*编辑表格开始*/
+.edit_table {
+	padding-top: 38px;
+	padding-left: 45px; 
+}
+.edit_table p {
+	font-size: 15px;
+}
+.edit_table span{
+	display:inline-block;
+	width: 80px;
+	text-align:right;
+}
+.edit_table input {
+	width: 278px;
+	height: 48px;
+	margin-bottom: 25px;
+	border:1px solid #dfdfdf;
+}
+
+.edit_table input[value],
+.edit_table input[placeholder],
+input {
+	padding-left: 10px;
+}
+.edit_table .nochange {
+	background-color: #f7f7f7;
+}
+.edit_table .tip {
+	width: 120px;
+	color: #ff7800;
+}
+/*编辑表格结束*/
+/*提交按钮开始*/
+.edit_table .btn {
+	margin-left: 82px;
+}
+/*提交按钮结束*/

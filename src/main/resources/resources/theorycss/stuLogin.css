@@ -1,0 +1,76 @@
+
+.sideBar {
+	float: none;
+	display: inline-block;
+}
+.four_div {
+	width: 100%;
+	min-height: 655px;
+}
+.content {
+	margin-left: 30px;
+	width: 940px;
+	height: auto;
+	float: none;
+	display: inline-flex;
+}
+#container {
+	height: auto;
+	min-height: 681px;
+	margin-bottom: 30px;
+}
+.four_div > div {
+	display: inline-block;
+	margin-top: 30px;
+}
+.four_div > div:nth-child(even) {
+    margin-left: 15px;
+}
+.one ,.two,.three,.four {
+	width: 458px;
+	height: 160px;
+	border: 1px solid #e6e4e4;
+}
+.one1 ,.two1,.three1,.four1 {
+	width: 400px;
+	height: 120px;
+	margin: 0 auto;
+}
+.three,.four {
+	margin-top: 25px;
+}
+.top1 {
+	height: 60px;
+	border-bottom: 1px solid #e6e4e4;
+}
+.top1 {
+	color: #353535;
+	font-size: 14px;
+}
+.top1  p {
+	height: 15px;
+}
+.top1  p:first-child {
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.bottom1{
+ width: 227px;
+ height: 40px;
+ margin-top: 15px;
+}
+.bottom1 button {
+	width: 87px;
+	height: 40px;
+	float: left;
+	margin-left: 0;
+	margin-top: 0;
+}
+.bottom1 span {
+	display: block;
+	float: left;
+	width: 26px;
+	height: 40px;
+	border-left: 1px solid #e6e4e4;
+	margin-left: 25px;
+}

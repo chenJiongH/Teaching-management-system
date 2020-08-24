@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师信息管理</title>
+
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../exjs/base.js"></script>
+    <script type="text/javascript" src="../exjs/teacherInfoManage.js"></script>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/dropDownList.css">
+    <link rel="stylesheet" type="text/css" href="../css/titleStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/tableStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/ulStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/teacherInfoManage.css">
+</head>
+<body>
+<div id="header">
+    <div class="top">
+        <div class="logo">
+            <img src="../images/logo.png">
+            <span>|</span>
+            <p>化学学院无机化学系</p>
+        </div>
+        <div class="info">
+            <div class="person">
+                <img src="../images/person.png">
+                <p></p>
+            </div>
+            <div class="exitLogin">
+                <img src="../images/exitLogin.png">
+                <p>退出登录</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="container">
+    <label id="message">1234</label>
+    <div class="title">
+        <p>
+            <span>|</span>
+            <span>教师</span>
+            <span>信息管理</span>
+        </p>
+    </div>
+    <div class="sel">
+        <form class="slects">
+            <input style="display: none" name="oriCname">
+            <input style="display: none" name="oriTerm">
+            <input style="display: none" name="oriPhone">
+            <div class="option1">
+                <span>教师姓名：</span>
+                <input notNull="" type="text" placeholder="请输入教师姓名" name="name">
+            </div>
+            <div class="option1">
+                <span>教师电话：</span>
+                <input notNull="" type="text" placeholder="请输入教师电话" name="phone">
+            </div>
+
+            <div class="option1">
+                <span>学期：</span>
+                <div class="option">
+                    <select notNull=""  name="term" id="term">
+                    </select>
+                </div>
+            </div>
+            <div class="option1">
+                <span>帐号密码：</span>
+                <input notNull=""  type="text" placeholder="请输入帐号密码" name="password">
+            </div>
+            <div class="option" style="right: 392px;">
+                <span style="position: relative;right: 80px;">课程名：</span>
+                <select notNull="" id="cname" name="cname" style="top: -56px;position: relative;">
+                    <option hidden="">
+                </select>
+            </div>
+
+            <div class="btn3">
+                <button type='button' class="btn" onclick="teacherPost()">确认添加</button>
+                <button type='button' class="btn btnPurple" onclick="teacherPut()">确认修改</button>
+            </div>
+        </form>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>教师名称</th>
+                <th>教师电话</th>
+                <th>密码</th>
+                <th>课程名</th>
+                <th>学期</th>
+                <th>操作</th>
+            </tr>
+        </table>
+    </div>
+    <ul class="sequence">
+        <li class="special fontColor">上一页</li>
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li class="special">下一页</li>
+    </ul>
+</div>
+
+</div>
+<div id="footer">
+    <div><p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p></div>
+</div>
+</body>
+</html>

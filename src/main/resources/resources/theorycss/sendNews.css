@@ -1,0 +1,97 @@
+#container {
+	height: 800px;
+}
+
+#selection{
+	width: 1200px;
+	height: 66px;
+	color: #555;
+	font-size: 14px;
+	line-height: 66px;
+	margin: 0 auto;
+}
+/*视频上传表单（所有页面通用）*/
+.video_f {
+	width: 965px;
+    height: 107px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.video_f ul {
+	height: 46px;
+}
+.video_f li {
+	float: left;
+	height: 43px;
+	position: relative;
+	font-size: 14px;
+}
+.video_f li span {
+	line-height: 43px;
+}
+.video_f li span,.video_f li select {
+	float: left;
+}
+.video_f li:first-child  {
+	width: 275px;
+
+}
+
+select,input {
+	width: 227px;
+	height: 43px;
+	border: 1px solid #e6e4e4;
+	padding-left: 10px;
+}
+.video_f li:nth-child(2) {
+	width: 290px;
+	margin-right: 35px;
+	margin-left: 35px;
+}
+.video_f li:last-child {
+	width: 325px;
+}
+
+.video_f li img{
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+.btn {
+	margin-left: 40px;
+}
+.t_div {
+	width: 973px;
+	height: 500px;
+
+}
+table {
+	width: 960px;	
+}
+
+td,th {
+	width: 191px;
+}
+tr:nth-child(odd) {
+	background-color: #fbf8f6;
+}
+tr:first-child {
+	background-color: #f9ecec;
+}
+.up, .down, .del {
+	width: 52px;
+	float: left;
+	text-align: right;
+	cursor: pointer;
+}
+.up {
+	background: url(../images/up.png) no-repeat 6px 6px;
+}
+.down {
+	margin-left: 12px;
+	margin-right: 12px;
+	background: url(../images/down.png) no-repeat 6px 6px;
+}
+.del {
+	background: url(../images/删除.png) no-repeat 2px 4px;
+}

@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 1080px;
+	background: url(../images/系统主页_01.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*头部开始*/
+
+#header {
+	height: 112px;
+}
+#header .top {
+	width: 1198px;
+	margin:0 auto;
+}
+#header .top .logo {
+	width: 204px;
+	height: 40px;
+	padding-top: 20px;
+}
+#header .top .logo img{
+	width: 204px;
+}
+#header .top .date {
+
+	width: 170px;
+	height: 28px;
+	color: #fff;
+	float: right;
+	font-family: "MicrosoftYaHei";
+	font-size: 14px;
+	margin-top: -25px; 
+	background-color: #381c4f;
+}
+.date img,.date p{
+	float: left;
+	padding: 6px 2px;
+}
+.date img {
+	padding-top: 7px;
+	padding-left: 7px;
+}
+
+/*头部结束*/
+/*中间开始*/
+
+#container {
+	width: 1198px;
+	height: 900px;
+	margin: 0px auto;
+}
+#container .center {
+	width: 650px;
+	height: 396px;	
+	margin: 0 auto;
+	padding-bottom: 300px;
+	padding-top: 100px;
+}
+#container .welcome {
+	text-align: center;
+}
+.welcome p {
+	color: #fff;
+
+}
+.welcome p:first-child {
+	font-size: 72px;
+}
+.welcome p:last-child {
+	font-size: 48px;
+}
+
+#container .select {
+	width: 570px;
+	height: 80px;
+	margin: 100px auto;
+	padding-top: 178px;
+}
+.select a{
+	background: white;
+	color: #a43030;
+	width: 258px;
+	float: left;
+	font-size: 30px; 
+}
+.select a:first-child {
+	margin-right: 54px;
+}
+/*.select a:hover {
+	background-color: #f00;
+	color: #fff;
+}*/
+.select .experiment ,.select .theory{
+	width: 132px;
+	height: 36px;
+	padding: 25px 65px;
+}
+
+.select img,.select p {	
+	float: left; 
+}
+
+.select p {
+	padding-top: -5px;
+	padding-left: 10px;
+	font-size: 28px;
+}
+/*中间结束*/
+/*底部开始*/
+
+#footer {
+	height: 70px;
+	background-color: #381c4f;
+}
+#footer div {
+	width: 1198px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+#footer div p {
+	text-align: center;
+	color: #7C599A;
+	font-size: 14px;
+	margin-top: 2px;
+}
+
+/*底部结束*/

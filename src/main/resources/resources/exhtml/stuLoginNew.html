@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生登录</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../exjs/swiper.min.js"></script>
+	<script type="text/javascript" src="../exjs/base.js"></script>
+	<script type="text/javascript" src="../exjs/stuLoginNew.js"></script>
+    <script type="text/javascript" src="../exjs/loginPage.js"></script>
+
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/stuLoginNew.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+				<img src="../images/logo.png">
+				<span>|</span>
+				<p>化学学院无机化学系</p>
+			</div>
+			<div class="info">
+				<div class="person">
+					<img src="../images/person.png">
+					<p></p>
+				</div>
+				<div class="exitLogin">
+					<img src="../images/exitLogin.png">
+					<p>退出登录</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+	   <div class="c_top">
+	   	   <div class="userLogin">
+	   	   	   <div class="c_login">
+				   <p class="welcome">欢迎您</p>
+                   <p class="name welcome"></p>
+
+                   <div class="btn01">
+                       <a href="answerQuestion.html" class="answer">
+                           <img src="../images/答题卡.png">
+                           <span>答题</span>
+                       </a>
+
+                       <a href="stuSelf_editInfo.html" class="editInfo">
+                           <img src="../images/个人信息-(1).png" alt="">
+                           <span>修改个人信息</span>
+                       </a>
+
+                   </div>
+	   	   	   </div>
+	   	   </div>
+	   	   <div class="v_div">
+	   	   	    <div class="title">
+	   	   		    <p>
+	   	   			    <span>|</span>
+	   	   			    <span>实验</span>
+	   	   			    <span>视频</span>
+	   	   		    </p>
+	   	   	    </div>
+	   	   	    <video id="video1" controls="controls"></video>
+
+			   <div class="swiper-container" >
+				   <div class="swiper-wrapper">
+					   <div class="swiper-slide">
+                       </div>
+				   </div>
+				   <!-- 如果需要滚动条 -->
+				   <div class="swiper-scrollbar" ></div>
+			   </div>
+	   	   </div>
+	   </div>
+	   <div class="c_bottom">
+	   	    <!--<div class="ex">-->
+	   	    	<!--<p>工科学生实验课</p>-->
+	   	    <!--</div>-->
+	   	    <!--<img src="../images/渐变.png">-->
+	   	    <div class="c_b">
+	   	    	<div class="left">
+	   	    		<div class="title">
+	   	    			<span>|</span>
+	   	    			<span>新闻</span>
+	   	    			<span>通知</span>
+	   	    		</div>
+	   	    		<ul class="newsPage">
+	   	    			<li class="current" name="1"></li>
+	   	    			<li name="2"></li>
+	   	    			<li name="3"></li>
+	   	    			<li name="4"></li>
+	   	    			<li name="5"></li>
+	   	    			<li name="6"></li>
+	   	    			<li name="7"></li>
+	   	    			<li name="8"></li>
+	   	    			<li name="9"></li>
+	   	    			<li name="10"></li>
+	   	    		</ul>
+					<!-- 新闻列表 -->
+	   	    		<ul class="newsList">
+	   	    		</ul>
+	   	    	</div>
+	   	    	<div class="right">
+					<!-- 隐藏的表单，用于下载文件 -->
+					<form id="scheduleExport" type="post" enctype="multipart/form-data" action="http://47.92.68.218:8080/schedule/download" style="display: none;">
+						<input name="fileDest" >
+						<input name="fileName" >
+					</form>
+	   	    		<div class="title">
+	   	    			<span>|</span>
+	   	    			<span>下载</span>
+	   	    			<span>列表</span>
+	   	    		</div>
+	   	    		<div class="change">
+	    		        <label name="1"><</label>
+	    		        <label name="2">></label>
+	    	        </div>
+					<!-- 存放下载列表具体数据 -->
+	   	    		<table>
+	   	    		</table>
+	   	    	</div>
+	   	    </div>
+	   </div>
+	</div>
+	<div class="footerbg">
+		
+	</div>
+	<div id="footer">
+		<div>
+			<p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p>
+		</div>
+	</div>
+</body>
+</html>

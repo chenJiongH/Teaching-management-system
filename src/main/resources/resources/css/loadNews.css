@@ -1,0 +1,67 @@
+#container {
+	height: 1512px;
+}
+#container #message {
+	top: 840px;
+}
+.sel {
+	height: 823px;
+	border-bottom: 1px solid #e9e8e8;
+}
+
+.table {
+	height: 455px;
+}
+form {
+	width: 1126px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+ form span {
+	 display: inline-block;
+	 vertical-align: top;
+	 width: 76px;
+	 height: 64px;
+	 margin-top: 20px;
+	 font-size: 15px;
+}
+.newsTitle {
+	width: 762px;
+	height: 50px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.newsTitle input {
+	width: 661px;
+	
+}
+.newsDate {
+	width: 362px;
+	height: 73px;
+}
+.newsContent {
+	width: 1126px;
+	height: 504px;
+	margin-top: 53px;
+}
+.newsContent .newsC {
+	resize: none;
+	width: 1047px;
+	height: 504px;
+	margin-left: 79px;
+	margin-top: -62px;
+	border: 1px solid #dfdfdf;
+}
+.btn {
+	margin-left: 75px;
+	margin-top: 51px;
+}
+.newsDate .Wate {
+	height: 50px;
+	border: 1px solid #dfdfdf;
+	background: #fff url(../images/日历1.png) no-repeat 255px 14px;
+}
+tr td:nth-child(4n){
+	cursor: pointer;
+	background: url(../images/删除.png) no-repeat 107px 15px;
+}

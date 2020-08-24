@@ -1,0 +1,39 @@
+#container {
+	height: auto;
+}
+
+.content {
+	width: 1126px;
+	height: auto;
+	margin: 0 auto;
+}
+#header .top .backMain {
+	width: 110px;
+	height: 28px;
+	background: #9e2121 url(../images/首页.png) no-repeat 15px 6px;
+	float: right;
+	margin-top: -24px;
+}
+#header .top .backMain p {
+    color: #fff;
+    line-height: 28px;
+    font-size: 14px;
+    padding-left: 35px;
+}
+.newTitle {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 24px;
+}
+.detail {
+    margin-top: 35px;
+}
+.newsMessage {
+	height: 28px;
+	font-size: 14px;
+	color: #555;
+	background-color: #f7f7f7;
+	text-align: center;
+	line-height: 28px;
+}

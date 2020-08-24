@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>教师登录修改个人信息</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../theoryjs/base.js"></script>
+	<script type="text/javascript" src="../theoryjs/mEditSelfInfo.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/sendNews.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+			    <img src="../images/logo1.png" alt="">
+			    <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+		    </div>
+		    <a class="backMain" href="#">
+		    	<img src="../images/首页red.png">
+		        <p>返回主页</p>
+		    </a>
+		</div>
+	</div>
+	<div id="selection">
+		<p>
+			<a href="#">主页</a>
+			>
+			<a href="#">&nbsp;&nbsp;修改个人资料</a>
+		</p>
+	</div>     
+	<div id="container">
+		<span id="message"></span>
+		<div class="sideBar">
+			<ul>
+				<li>
+					<a href="meditTeacherInfo.html">
+						<img src="../images/教师grey.png" alt="">
+						<span>教师信息修改</span>
+					</a>
+				</li>
+				<li>
+					<a href="mCourseInfoEdit.html">
+						<img src="../images/课程grey.png">
+						<span>课程信息修改</span>
+					</a>
+				</li>
+				<li>
+					<a href="muploadView.html">
+						<img src="../images/视频grey.png" alt="">
+						<span>风景上传</span>
+					</a>
+				</li>
+				<li>
+					<a href="muploaProress.html">
+						<img src="../images/kecheng-.png" alt="">
+						<span>进度表上传</span>
+					</a>
+
+				</li>
+				<li>
+					<a href="muploadNotice.html"><img src="../images/通知grey.png" alt="">
+						<span>通知上传</span></a>
+
+				</li>
+				<li>
+					<a href="muploadVideo.html"><img src="../images/视频grey.png" alt="">
+						<span>视频上传</span></a>
+
+				</li>
+				<li>
+					<a href="muploadNews.html"><img src="../images/修改grey.png" alt="">
+						<span>新闻上传</span></a>
+
+				</li>
+				<li>
+					<a href="#"><img src="../images/数据grey.png" alt="">
+						<span>数据维护</span></a>
+
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="title1">修改个人资料</div>
+			<form class="video_f">
+				<ul id="edit">
+					<li>
+						<span>手机号：</span>
+						<input type="text" name="phone" id="phone">
+					</li>
+					<li>
+						<span>姓名：</span>
+						<input type="text" name="name" id="name" style="text-align: left;width: 227px;">
+					</li>
+					<li>
+						<span>密码：</span>
+						<input type="password" placeholder="请输入密码" name="password" id="password">
+					</li>
+					<li>
+						<span>确认密码：</span>
+						<input type="password" placeholder="请确认密码" name="pw1" id="pw1">
+					</li>
+				</ul>
+				<button type="button" class="btn" style="margin-left: 106px;" onclick="put()">确认修改</button>
+			</form>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="f_div">
+			<div class="link">
+			    常用链接：
+			    <a href="#" id="emial">校领导信箱</a>
+			    <a href="#" id="phone">校内电话</a>
+			    <a href="#" id="buy">招标采购网</a>
+			    <a href="#" id="lab">图书馆</a>
+			    <a href="#" id="fznews">福州大学报</a>
+		    </div>
+		    <div class="address">
+		    	&copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+		    </div>
+		</div>
+	</div>　　　　
+</body>
+</html>

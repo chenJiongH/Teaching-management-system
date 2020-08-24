@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实验课</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../exjs/swiper.min.js"></script>
+	<script type="text/javascript" src="../exjs/base.js"></script>
+	<script type="text/javascript" src="../exjs/main.js"></script>
+
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+				<img src="../images/logo.png">
+				<span>|</span>
+				<p>化学学院无机化学系</p>
+			</div>
+		     <a class="backMain" href="../index.html">
+		     	<p>返回主页</p>
+		     </a>
+		</div>
+	</div>
+	<div id="container">
+	   <div class="c_top">
+	   	   <div class="userLogin">
+	   	   	   <div class="c_login">
+	   	   	   	   <p>
+	   	   	   	   	<span>用户登录</span>
+	   	   	   	   	<span>*理科学生实验课需登录</span>
+	   	   	   	   </p>
+	   	   	   	   <ul id="tab">
+	   	   	   	   	  <div class="tab_li">
+	   	   	   	   	  	    <li id="tab1" value="1">学生</li>
+	   	   	   	   	        <li id="tab2" value="2">教师</li>
+	   	   	   	   	        <li id="tab3" value="3">管理员</li>
+	   	   	   	   	  </div>  
+	   	   	   	   </ul>
+	   	   	   	   <div id="content">
+	   	   	   	   	   <form class="content1">
+	   	   	   	   	   	   <input type="text" value="学生" name="type" style="display: none;">
+	   	   	   	   	   	   <input type="text" value="实验" name="system" style="display: none;">
+	   	   	   	   	   	   <input type="username" name="username" placeholder="请输入学号">
+	   	   	   	   	   	   <input type="password" name="password" placeholder="请输入密码">
+	   	   	   	   	   	   
+	   	   	   	   	   	   <button type="button" class="btn" onClick="get()">登录</button>
+	   	   	   	   	   	   <a href="stuForgetPassword.html">忘记密码?</a>
+	   	   	   	   	   </form>
+					   <label id="message"></label>
+  
+                    </div>
+	   	   	   </div>
+	   	   </div>
+	   	   <div class="v_div">
+	   	   	    <div class="title">
+	   	   		    <p>
+	   	   			    <span>|</span>
+	   	   			    <span>实验</span>
+	   	   			    <span>视频</span>
+	   	   		    </p>
+	   	   	    </div>
+	   	   	    <video id="video1" controls="controls"></video>
+
+			   <div class="swiper-container" >
+				   <div class="swiper-wrapper">
+					   <div class="swiper-slide">
+                       </div>
+				   </div>
+				   <!-- 如果需要滚动条 -->
+				   <div class="swiper-scrollbar" ></div>
+			   </div>
+	   	   </div>
+	   </div>
+	   <div class="c_bottom">
+	   	    <div class="ex">
+	   	    	<p>工科学生实验课</p>
+	   	    </div>
+	   	    <img src="../images/渐变.png">
+	   	    <div class="c_b">
+	   	    	<div class="left">
+	   	    		<div class="title">
+	   	    			<span>|</span>
+	   	    			<span>新闻</span>
+	   	    			<span>通知</span>
+	   	    		</div>
+	   	    		<ul class="newsPage">
+	   	    			<li class="current" name="1"></li>
+	   	    			<li name="2"></li>
+	   	    			<li name="3"></li>
+	   	    			<li name="4"></li>
+	   	    			<li name="5"></li>
+	   	    			<li name="6"></li>
+	   	    			<li name="7"></li>
+	   	    			<li name="8"></li>
+	   	    			<li name="9"></li>
+	   	    			<li name="10"></li>
+	   	    		</ul>
+					<!-- 新闻列表 -->
+	   	    		<ul class="newsList">
+	   	    		</ul>
+	   	    	</div>
+	   	    	<div class="right">
+					<!-- 隐藏的表单，用于下载文件 -->
+					<form id="scheduleExport" method="get" enctype="multipart/form-data" action="/schedule/download" style="display: none;">
+						<input name="fileDest" >
+						<input name="fileName" >
+					</form>
+	   	    		<div class="title">
+	   	    			<span>|</span>
+	   	    			<span>下载</span>
+	   	    			<span>列表</span>
+	   	    		</div>
+	   	    		<div class="change">
+	    		        <label name="1"><</label>
+	    		        <label name="2">></label>
+	    	        </div>
+					<!-- 存放下载列表具体数据 -->
+	   	    		<table>
+	   	    		</table>
+	   	    	</div>
+	   	    </div>
+	   </div>
+	</div>
+	<div class="footerbg">
+		
+	</div>
+	<div id="footer">
+		<div>
+			<p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师评分</title>
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../exjs/base.js"></script>
+    <script type="text/javascript" src="../exjs/teacherMark.js"></script>
+    <style>
+        #tooltip {
+            position: absolute;
+            width: 500px;
+            border: 1px solid #333;
+            background: #fefefe;
+            padding: 1px;
+            color: #333;
+            display: none;
+        }</style>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/dropDownList.css">
+    <link rel="stylesheet" type="text/css" href="../css/titleStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/tableStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/teacherMark.css">
+</head>
+<body>
+<div id="header">
+    <div class="top">
+        <div class="logo">
+            <img src="../images/logo.png">
+            <span>|</span>
+            <p>化学学院无机化学系</p>
+        </div>
+        <div class="info">
+            <div class="person">
+                <img src="../images/person.png">
+                <p></p>
+            </div>
+            <div class="exitLogin">
+                <img src="../images/exitLogin.png">
+                <p>退出登录</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="container">
+
+    <div class="content">
+        <div class="t_word">
+            <p>您已进入评分系统，</p>
+            <p style="font-size: 30px;">请选择您要评分的课程、项目和学生！</p>
+        </div>
+
+        <form class="slects">
+            <!-- 用于发送评分 -->
+            <input name="sno" style="display: none">
+            <input name="name" style="display: none">
+
+            <div class="option1">
+                <span>学期：</span>
+                <div class="option">
+                    <select name="term" id="term">
+                    </select>
+                </div>
+            </div>
+            <div class="option1">
+                <span>课程：</span>
+                <div class="option">
+                    <select name="cname" id="course">
+                    </select>
+                </div>
+            </div>
+            <div class="option1">
+                <span>项目：</span>
+                <div class="option">
+                    <select name="pname" id="program">
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="list">
+        <label id="message"></label>
+        <div class="title">
+            <p>
+                <span>|</span>
+                <span>学生</span>
+                <span>列表</span>
+            </p>
+        </div>
+        <div class="list_all">
+            <div class="left">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>分数</th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="right">
+                <div class="question ques">
+                    <label>1</label>
+                    <p id="onepro"></p>
+                </div>
+                <div class="answer" style="height: 84px;">
+                    <div class="ans">
+                        <p id="onean"></p>
+                    </div>
+                </div>
+                <div class="question">
+                    <label>2</label>
+                    <p id="twopro"></p>
+                </div>
+                <div class="answer an1" style="height: 112px;">
+                    <div class="ans">
+                        <p id="twoan"></p>
+                    </div>
+                </div>
+                <div class="question">
+                    <label>3</label>
+                    <p id="threepro"></p>
+                </div>
+                <div class="answer an1">
+                    <div class="ans">
+                        <p id="threean"></p>
+                    </div>
+                </div>
+                <form class="score">
+                    <div class="score1">
+                        <span>分数:</span>
+                        <input name="score" type="text">
+                    </div>
+                    <button type="button" class="btn" onclick="put()">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div><p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p></div>
+</div>
+</body>
+</html>

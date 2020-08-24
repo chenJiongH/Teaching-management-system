@@ -1,0 +1,144 @@
+#container {
+	height: 875px;
+}
+#selection {
+	height: 47px;
+}
+.video_f {
+	height: 180px;
+}
+.video_f ul {
+	height: 120px;
+}
+.optionDate .Wate{
+	cursor: pointer;
+	height: 43px;
+	border: 1px solid #dfdfdf;
+	background:#fff url(../images/日历1.png ) no-repeat 202px 15px;
+}
+#set ul label img {
+    cursor: pointer;
+}
+tr:first-child {
+	background: rgb(249, 244, 253) !important;
+}
+.video_f ul li:nth-child(5) {
+	margin-left: 27px;
+	margin-right: 13px;
+}
+.video_f ul li:nth-child(3) input {
+	width: 222px;
+}
+.video_f ul li:nth-child(5) input,
+.video_f ul li:nth-child(6) input {
+	width: 221px;
+
+}
+.video_f ul li:nth-child(4),.video_f ul li:nth-child(5),
+.video_f ul li:nth-child(6){
+	margin-top: 20px;
+}
+.btn {
+	width: 90px;
+}
+.t_div {
+	overflow-x: auto;
+	
+}
+.t_div td:nth-child(22n) {
+	cursor: pointer;
+	
+	background: url(../images/删除.png) no-repeat 60px 15px;
+}
+/*.t_div td:nth-child(22n),.t_div th:nth-child(22n){
+	position: absolute;
+}*/
+/*隐藏框的样式*/
+
+#set{
+	width: 800px;
+	height: 865px;
+	position: absolute;
+	background-color: #fff;
+	/*top :130px;*/
+	/*left:20%;*/
+	left: 50%;
+	top: 50%;
+	margin-left: -335px;
+	margin-top: -350px;
+	z-index: 999;
+	display: none;
+}
+#set .all{
+	width: 725px;
+	height: 795px;
+	margin: 0 auto;
+	margin-top: 35px;
+
+}
+#set .all .sequence {
+	width: 680px;
+	height: 40px;
+	list-style: none;
+	font-size: 12px;
+	color:#555555;
+	margin-left: 48px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+#set .all li {
+	margin-top: 30px;
+}
+#set .all .sequence li:hover {
+	cursor: pointer;
+}
+#set .all .sequence li {
+	float: left;
+	margin-left: 10px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 36px;
+	background-color: #f1f1f1;
+}
+#set .all .sequence .special{
+	width: 80px;
+}
+#set .all .sequence .fontColor{
+ 	color:#c9c9c9;
+ }
+#set .all .sequence .current {
+	background-color: #912121;
+	color: #fff;
+}
+
+#set ul label{
+	display: block;
+	width: 725px;
+	height: 40px;
+	position: relative;
+	border-bottom: 1px solid #a24243;
+}
+#set ul label img {
+	position: absolute;
+	right: 0;
+}
+.que {
+	display: inline-block;
+	height: 20px;
+	float: left;
+}
+#editor {
+    margin: 0 auto;
+}
+#set .all .btn {
+	/*margin-left: 360px;*/
+    top: -800px;
+	left: 500px;
+	position: relative;
+}
+
+
+tr:first-child:hover {
+	background-color: rgb(249, 244, 253) !important;
+}

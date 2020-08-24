@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+        // Promise 解决嵌套异步请求的长度代码，和各异步请求之间的重复代码
+        // 借助 Promise 定义一个异步请求的模板
+        function ajax(type, url, data, number = 0) {
+
+            var contentType = ["text/html;charset=utf-8", "application/json; charset=utf-8"];
+            return new Promise((resolve) => {
+                $.ajax({
+                    type: type,
+                    url: url,
+                    data: data,
+                    contentType: contentType[number],
+                    success: function (data) {
+                        resolve(data);
+                    }
+                });
+            })
+        }
+        
+        var path = "http://47.92.68.218:8080";
+        // 三重嵌套循环案例
+        ajax('get', `${path}/term`)
+            .then((data) => {
+                console.log("学期查询成功：", data.id);
+                return ajax('get', `${path}/course`, {});
+            })
+            .then((data) => {
+                console.log("课程查询成功：", data);
+                return ajax('get', `${path}/project/getAll`, {'term': `2020学年-2021学年第一学期`,'cname': "高数"},)
+            })
+            .then((data) => {
+                console.log("项目查询成功：", data);
+            })
+            .catch((err) => {
+                console.log("在某个流程中出现了异常");
+            })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

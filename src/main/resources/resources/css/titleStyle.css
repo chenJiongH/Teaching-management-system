@@ -1,0 +1,16 @@
+.title {
+	width: 1126px;
+	height: 25px;
+	border-bottom: 1px solid #e9e8e8;
+	padding: 30px 37px;
+}
+.title span {
+	font-size: 20px;
+	font-weight: bold;
+}
+.title span:first-child,.title span:nth-child(2) {
+	color: #381c4f;
+}
+.title span:last-child{
+	color: #9e2121;
+}

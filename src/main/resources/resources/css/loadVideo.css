@@ -1,0 +1,67 @@
+#container {
+	height: 977px;
+}
+
+.sel{
+	width: 1200px;
+	height: 340px;
+	border-bottom: 1px solid #e9e8e8;
+}
+.slects span{
+	font-size: 15px;
+	color: #444444;
+}
+
+.option1 {
+	margin-bottom: 25px;
+	width: 1200px;
+}
+.option1 input {
+	float: left;
+	width: 643px;
+}
+.option2 span {
+	display: inline-block;
+	margin-top: 28px;
+}
+.file {
+	display: inline-block;
+	width: 662px;
+	height: 52px;
+	border: 1px solid #dfdfdf;
+	margin: 30px 0px;
+	padding-left: -37px;
+
+}
+.btn {
+	margin-left: 84px;
+}
+.file input {
+	width: 661px;
+	position: absolute;
+	left:0;
+	top:0;
+	zoom: 1;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	font-size: 20px;
+	/*margin-left: -240px;*/
+	border: 1px solid blue;
+}
+.fileChoice {
+	outline: none;
+	width: 88px;
+	height: 38px;
+	margin-left: 567px;
+	margin-top: 8px;
+}
+.fileP {
+	position: absolute;
+	line-height: 50px;
+	margin-left: 1%;
+}
+
+table tr td:nth-child(6n){
+	cursor: pointer;
+	background: url(../images/删除.png) no-repeat 60px 15px;
+}

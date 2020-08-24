@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>教师登录设置章节题目</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/lang/zh-cn/zh-cn.js"></script>
+
+	<script type="text/javascript">
+		var ue;
+        $(function ()  {
+            ue = UE.getEditor('editor', { 
+               autoHeightEnabled: false,//设置不自动调整高度
+                enterTag: "br", 	// 设置不自动添加换行符
+                autoFloatEnabled:false // 设置工具栏不浮动度
+            });
+            ue.ready(function () {
+				$("#edui1_message_holder").css("display", "none");
+				$("#edui1_bottombar").css("display", "none");
+            });
+        })
+	</script>
+	<script type="text/javascript" charset="utf-8" src="../theoryjs/base.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../theoryjs/teacherSetProblem.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/sendNews.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/teacherSetProblem.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+			    <img src="../images/logo1.png" alt="">
+			    <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+		    </div>
+		    <a class="backMain" href="#">
+		    	<img src="../images/首页red.png">
+		        <p>返回主页</p>
+		    </a>
+		</div>
+	</div>
+	<div id="selection">
+		<p>
+			<a href="#">主页</a>
+			>
+			<a href="#">&nbsp;&nbsp;设置章节题目</a>
+		</p>
+	</div>
+    <!-- 背景幕布，点击增加时，幕布显示 -->
+	<div id="curtain" class="curtain"></div>
+	<form id="set" style="z-index: 1000">
+		<ul class="all">
+			<label>
+				设置章节题目
+				<img src="../images/关闭.png" onclick="cancel()">
+			</label>
+			<li>
+				<span class="que" style="display: none;">题目1:</span>
+				<div id="editor" style="width:665px;height:505px;" ></div>
+			</li>
+			<ul class="sequence">
+	    	    <li class="special fontColor">上一页</li>
+	    	    <li class="current">1</li>
+	    	    <li>2</li>
+	    	    <li>3</li>
+	    	    <li>4</li>
+	    	    <li>5</li>
+	    	    <li>6</li>
+	    	    <li>7</li>
+	    	    <li>8</li>
+	    	    <li>9</li>
+	    	    <li>10</li>
+	    	    <li class="special">下一页</li>
+	        </ul>
+	        <button type="button" class="btn" onclick="postProblem()">提交</button>
+		</ul>
+	</form>　    
+	<div id="container">
+        <span id="message"></span>
+		<div class="sideBar">
+			<ul style="width: 145px;">
+				<li>
+					<a href="teacherSetProblem.html">
+					<img src="../images/zhangjiezujuan1.png" alt="">
+					<span class="current">设置章节题目</span></a>
+				</li>
+				<li>
+					<a href="teacherMark.html">
+					<img src="../images/rate.png" alt="">
+					<span>评分</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadTerm.html">
+					<img src="../images/kecheng-.png" alt="">
+					<span>上传本课程资料</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadV.html">
+					<img src="../images/视频grey.png" alt="">
+					<span>发布视频</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadNotice.html">
+					<img src="../images/通知grey.png" alt="">
+					<span>发布通知</span></a>
+				</li>
+				
+				<li>
+					<a href="teacherLoadStuInfo.html">
+					<img src="../images/xuesheng-.png" alt="">
+					<span>导入学生信息</span></a>
+				</li>
+				<li>
+					<a href="teacherEditSelfInfo.html">
+					<img src="../images/修改grey.png" alt="">
+					<span>修改个人信息</span></a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="title1">设置章节题目</div>
+			<form class="video_f">
+				<ul>
+					<li>
+						<span>学期：</span>
+						<select name="term" id="term"></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li>
+						<span>课程名：</span>
+						<select name="cname" id="cname"></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li>
+						<span>章节：</span>
+						<input type="text" name="pname" id="pname">
+					</li>
+					<li>
+						<span>数量：</span>
+						<select name="number" id="number">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+						</select>
+						<img src="../images/箭头.png">
+					</li>
+					<li class="optionDate">
+						<span>开始时间：</span>
+						<input type="text" placeholder="请选择时间" class="Wdate Wate" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text" name="start" id="start">
+					</li>
+					<li class="optionDate">
+						<span>截止时间：</span>
+						<input type="text" placeholder="请选择时间" class="Wdate Wate" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" type="text" name="end" id="end">
+					</li>
+						<input type="text" name="lbproblem.one" id="lbproblemone" style="display: none;">
+						<input type="text" name="lbproblem.two" id="lbproblemtwo" style="display: none;">
+						<input type="text" name="lbproblem.three" id="lbproblemthree" style="display: none;">
+						<input type="text" name="lbproblem.four" id="lbproblemfour" style="display: none;">
+						<input type="text" name="lbproblem.five" id="lbproblemfive" style="display: none;">
+						<input type="text" name="lbproblem.six" id="lbproblemsix" style="display: none;">
+						<input type="text" name="lbproblem.seven" id="lbproblemseven" style="display: none;">
+						<input type="text" name="lbproblem.eight" id="lbproblemeight" style="display: none;">
+						<input type="text" name="lbproblem.nine" id="lbproblemnine" style="display: none;">
+						<input type="text" name="lbproblem.ten" id="lbproblemten" style="display: none;">
+						<input type="text" name="lbproblem.eleven" id="lbproblemeleven" style="display: none;">
+						<input type="text" name="lbproblem.twelve" id="lbproblemtwelve" style="display: none;">
+						<input type="text" name="lbproblem.thirteen" id="lbproblemthirteen" style="display: none;">
+						<input type="text" name="lbproblem.fourteen" id="lbproblemfourteen" style="display: none;">
+						<input type="text" name="lbproblem.fifteen" id="lbproblemfifteen" style="display: none;">
+						<input type="text" name="lbproblem.plaintext" id="lbproblemplaintext" style="display: none;">
+						<input type="text" style="display: none;" name="oriTerm">
+						<input type="text" style="display: none;" name="oriCname">
+						<input type="text" style="display: none;" name="oriPname">
+					
+				</ul>
+				<button type="button" class="btn" onclick="post()">增加</button>
+				<button type="button" class="btn purpleBtn" onclick="put()">修改</button>
+			</form>
+			
+			<div class="t_div">
+				<table>
+				    <tr>
+				    	<th>课程</th>
+				    	<th>章节</th>
+				    	<th>学期</th>
+				    	<th>数量</th>
+				    	<th>开始时间</th>
+				    	<th>结束时间</th>
+				    	<th>题目1</th>
+				    	<th>题目2</th>
+				    	<th>题目3</th>
+				    	<th>题目4</th>
+				    	<th>题目5</th>
+				    	<th>题目6</th>
+				    	<th>题目7</th>
+				    	<th>题目8</th>
+				    	<th>题目9</th>
+				    	<th>题目10</th>
+				    	<th>题目11</th>
+				    	<th>题目12</th>
+				    	<th>题目13</th>
+				    	<th>题目14</th>
+				    	<th>题目15</th>
+				    	<th style="top: 0px; background-color: rgb(249, 244, 253); right: 3227px;">操作</th>
+				    </tr>
+			   </table>
+			</div>
+			<ul class="sequence">
+	    	    <li class="special fontColor">上一页</li>
+	    	    <li class="current">1</li>
+	    	    <li>2</li>
+	    	    <li>3</li>
+	    	    <li>4</li>
+	    	    <li>5</li>
+	    	    <li>6</li>
+	    	    <li>7</li>
+	    	    <li>8</li>
+	    	    <li>9</li>
+	    	    <li>10</li>
+	    	    <li class="special">下一页</li>
+	        </ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="f_div">
+			<div class="link">
+			    常用链接：
+			    <a href="#" id="emial">校领导信箱</a>
+			    <a href="#" id="phone">校内电话</a>
+			    <a href="#" id="buy">招标采购网</a>
+			    <a href="#" id="lab">图书馆</a>
+			    <a href="#" id="fznews">福州大学报</a>
+		    </div>
+		    <div class="address">
+		    	&copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+		    </div>
+		</div>
+	</div>　　　
+</body>
+</html>

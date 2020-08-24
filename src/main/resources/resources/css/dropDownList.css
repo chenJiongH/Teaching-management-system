@@ -1,0 +1,66 @@
+select{
+  /*清除select的边框样式*/
+    border: none;
+  /*清除select聚焦时候的边框颜色*/
+    outline: none;
+  /*将select的宽高等于div的宽高*/
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+  /*隐藏select的下拉图标*/
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  /*通过padding-left的值让文字居中*/
+    padding-left: 20px;
+ }
+ .slects {
+  width: 1130px;
+  height: 130px;
+  margin-left: 38px;
+
+}
+ .slects span {
+  display: block;
+  width: 75px;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: right;
+  font-size: 15px;
+}
+.option1 {
+  width: 360px;
+  height: 50px;
+  float: left;
+  padding-right: 15px;
+}
+ /*使用伪类给select添加自己想用的图标*/
+.option,input{
+  /*用div的样式代替select的样式*/
+    width: 280px;
+    height: 50px;
+    border: 1px solid #dfdfdf;
+    position: relative;
+    float: right;
+    color: #444444;
+ }
+ input{
+  width: 260px;
+  padding-left: 20px;
+ }
+.option:after{
+    content: "";
+    width: 14px;
+    height: 8px;
+    
+    /*通过定位将图标放在合适的位置*/
+    position: absolute;
+    right: 20px;
+    top: 41%;
+    /*给自定义的图标实现点击下来功能*/
+    pointer-events: none;
+ }
+ .option:after{
+  background: url(../images/箭头.png) no-repeat center;
+ }

@@ -1,0 +1,41 @@
+td {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: center;
+    /* 为了继承 tr 悬浮的隔行变色 */
+	/*color: #555555;	*/
+}
+tr {
+	height: 45px;
+}
+th {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+    position: relative;
+}
+.table {
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 1126px;
+	margin: 30px auto 0px;
+	height: 509px;
+}
+table {
+	width: 1126px;
+	table-layout: fixed;
+	border-collapse: collapse;
+	position: relative;
+}
+tr:nth-child(odd) {
+	background-color: #f9f4fd;
+}
+tr:hover{
+    background-color: #99529b;
+    color: #fff !important;
+}
+tr:first-child:hover {
+    background-color: #f9f4fd;
+    color: black !important;
+}

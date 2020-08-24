@@ -1,0 +1,31 @@
+.sequence {
+	width: 680px;
+	height: 40px;
+	list-style: none;
+	font-size: 12px;
+	color:#555555;
+	margin-left: 477px;
+	margin-top: 27px;
+}
+.sequence li:hover {
+	cursor: pointer;
+}
+.sequence li {
+	float: left;
+	margin-left: 10px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 36px;
+	background-color: #f1f1f1;
+}
+ .sequence .special{
+	width: 80px;
+}
+ .sequence .fontColor{
+ 	color:#c9c9c9;
+ }
+ .sequence .current {
+	background-color: #381c4f;
+	color: #fff;
+}

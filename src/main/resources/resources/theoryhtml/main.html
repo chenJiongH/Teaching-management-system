@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>理论课</title>
+    <link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+    <link rel="stylesheet" type="text/css" href="../theorycss/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../theorycss/main.css">
+
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../theoryjs/swiper.min.js"></script>
+    <script type="text/javascript" src="../theoryjs/base.js"></script>
+    <script type="text/javascript" src="../theoryjs/getMultimedia.js"></script>
+    <script type="text/javascript" src="../theoryjs/main.js"></script>
+    <script>
+        function videoSwiper() {
+                var mySwiper = new Swiper('.left_c .swiper-container', {
+                    direction: 'vertical', // 垂直切换选项
+                    mousewheel: true,
+                    freeMode: true,
+                    slidesPerView: 4,
+                    // 如果需要滚动条
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: true,
+                    },
+                })
+                mySwiper.scrollbar.$el.css({
+                    'width': '8px',
+                    'cursor': 'pointer'
+                });
+                mySwiper.scrollbar.$dragEl.css('background', 'rgb(158, 33, 33)');
+                $(".swiper-wrapper .swiper-slide").css("cursor", "pointer");
+            }
+    </script>
+    <script>
+        // 点击翻页之后做的操作
+        function changeNotice() {
+            $(".left_bo .turn li").removeAttr("class");
+            $(this).attr("class", "current");
+            $("input[name=curpage]").val($(this).attr("name"));
+            getNotice();
+        }
+        </script>
+</head>
+<body style="background-color: #fff">
+<div id="header">
+    <div class="top">
+        <div class="logo">
+            <img src="../images/logo1.png" alt="">
+            <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+        </div>
+        <a class="backMain" href="../index.html">
+            <img src="../images/首页red.png">
+            <p>返回主页</p>
+        </a>
+    </div>
+</div>
+<div id="container">
+    <div class="top">
+        <div class="login">
+            <form class="loginCo">
+                <span id="message"></span>
+                <label>用户登录</label>
+                <input type="text" name="username" placeholder="请输入学号/手机号" autocomplete="off">
+                <input type="password" name="password" placeholder="请输入密码" autocomplete="off">
+                <button type="button" class="btn" onclick="get()">立即登录</button>
+                <a href="findPassword.html">忘记密码？</a>
+            </form>
+        </div>
+
+        <!-- 隐藏的表单，用于下载文件 -->
+        <form id="scheduleExport" method="post" enctype="multipart/form-data" action="/schedule/download" style="display: none;">
+            <input name="fileDest" >
+            <input name="fileName" >
+        </form>
+        <div class="news">
+            <div class="title">
+                <span>|</span>
+                <span>最新</span>
+                <span>新闻</span>
+            </div>
+            <div class="cons">
+                <div class="top2" onmouseenter="$(this).find('div').attr('style', 'color:#d61e1e !important;cursor:pointer');" onmouseleave="$(this).find('div').removeAttr('style')">
+                    <div class="pic"><img ></div>
+                    <div class="conts">
+                        <div class="newsT"></div>
+                        <div class="newsC"></div>
+                        <div class="newsTime"></div>
+                    </div>
+                </div>
+                <div class="bottom2">
+                    <ul class="list">
+                        
+                    </ul>
+                    <ul class="changeNews">
+                        <li class="current" name="1"></li>
+                        <li name="2"></li>
+                        <li name="3"></li>
+                        <li name="4"></li>
+                        <li name="5"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <form class="video_f" style="display: none">
+                <input name="curpage" style="display: none" value="1">
+                 <input name="pageNumber" style="display: none" value="100">
+        </form>
+       <div class="left_c">
+            <div class="title">
+                <span>|</span>
+                <span>视频</span>
+                <span>列表</span>
+            </div>
+            <div class="swiper-container" >
+                <div class="swiper-wrapper">
+                            <!-- 填充视频
+                            <div class="swiper-slide swiper-slide-active" style="height: 72.5px; cursor: pointer;">
+                                <video src="\lbvideo\QQ视频20200521194646.mp4"></video>
+                                <p>放置视频内容 summary</p>
+                                <span>发布时间：2019-04-04</span>
+                            </div>
+                            -->
+                </div>
+                        <!-- 如果需要滚动条 -->
+                <div class="swiper-scrollbar" ></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="left_bo">
+            <div class="title">
+                <span>|</span>
+                <span>最新</span>
+                <span>通知</span>
+                <ul class="turn">
+                    <li class="current" name="1" ></li>
+                    <li name="2" ></li>
+                    <li name="3" ></li>
+                    <li name="4" ></li>
+                </ul>
+            </div>
+            <ul class="contents">
+                <li>
+                    <!--<div class="date">-->
+                        <!--<div class="day">05</div>-->
+                        <!--<div class="ym">2020-06</div>-->
+                    <!--</div>-->
+                    <!--<div class="desc">-->
+                        <!--<p>关于化学学院2020年“迎新年”教职.</p>-->
+                        <!--<label>为丰富全院教职工文化生活，倡导“每天健...</label>-->
+                    <!--</div>-->
+                </li>
+                
+            </ul>
+        </div>
+        <div class="view">
+            <div class="title" style="padding-top: 30px;padding-bottom: 18px;">
+                <span>|</span>
+                <span>学校</span>
+                <span>风景</span>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+        <div class="left_top">
+            <div class="title">
+                <span>|</span>
+                <span>下载</span>
+                <span>列表</span>
+               <ul class="turn">
+                    <li name="1" dir="l"><</li>
+                    <li name="2" dir="r">></li>
+                </ul>
+            </div>
+            <div class="t_div">
+               <table>
+                   
+               </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="f_div">
+        <div class="link">
+            常用链接：
+            <a href="#" id="emial">校领导信箱</a>
+            <a href="#" id="phone">校内电话</a>
+            <a href="#" id="buy">招标采购网</a>
+            <a href="#" id="lab">图书馆</a>
+            <a href="#" id="fznews">福州大学报</a>
+        </div>
+        <div class="address">
+            &copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+        </div>
+    </div>
+</div>
+　　　　
+</body>
+</html>

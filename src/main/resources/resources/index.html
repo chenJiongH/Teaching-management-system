@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>无机化学系教学管理系统</title>
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="date">
+                <img src="images/日历.png">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+	<div id="container">
+		<div class="center">
+			<div class="welcome">
+			    <p>欢迎访问无机化学系</p>
+			    <p>教学管理系统</p>
+		    </div>
+		    <div class="select">
+			    <a href="exhtml/main.html">
+			    	<div class="experiment">
+			    		<img src="images/实验white.png">
+			    		<p>实验课</p>
+			    	</div>
+			    </a>
+			    <a href="theoryhtml/main.html">
+			    	<div class="theory">
+			    		<img src="images/理论red.png" >
+			    		<p>理论课</p>
+			    	</div>
+			    </a>
+		    </div>
+		</div>
+	</div>
+	<div id="footer">
+		<div><p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p></div>
+	</div>
+</body>
+
+<script type="text/javascript">
+    // 主页时间
+    var timeObject = $(".date p");
+    var myDate = new Date();
+    var time;
+    var year = myDate.getFullYear();    //获取当前年
+    time = year + "年";
+    var month = myDate.getMonth()+1;   //获取当前月
+    time += month + "月";
+    var date = myDate.getDate();       //获取当前日
+    time += date + "日";
+    timeObject.html(time);
+
+    $(".select a").mouseenter(function () {
+        $(this).css("background", "#a43030");
+        $(this).css("color", "#fff");
+        // 此时图片的src：images/实验white.png；需要补充1即可
+        var imgSrc = $(this).find("img").attr("src").substring(7);
+        $(this).find("img").prop("src", "images/1" + imgSrc);
+    });
+    $(".select a").mouseleave(function () {
+        $(this).css("background", "#fff");
+        $(this).css("color", "#a43030");
+        // 原来图片的src：images/1实验white.png；需要去掉1即可
+        var imgSrc = $(this).find("img").attr("src").substring(8);
+        $(this).find("img").prop("src", "images/" + imgSrc);
+    });
+</script>
+
+</html>

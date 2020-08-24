@@ -1,0 +1,61 @@
+.video_f li:nth-child(2) {
+    width: 320px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.video_f ul li:nth-child(2) img {
+	right: 44px;
+}
+/*增加学生框，需要先隐藏*/
+#add{
+	display: none;
+	width: 440px;
+	height: 460px;
+	position: absolute;
+	top: 160px;
+	left: 36%;
+	background-color: #fff;
+	z-index: 999;
+}
+#add ul {
+	width: 360px;
+	height: 385px;
+	margin: 0 auto;
+	margin-top: 35px;
+}
+#add ul label{
+	display: block;
+	width: 362px;
+	height: 36px;
+	font-size: 16px;
+	border-bottom: 1px solid #a24242;
+	position: relative;
+}
+#add ul label img{
+	position: absolute;
+	right:0;
+	cursor: pointer;
+}
+#add ul li {
+	margin-top: 20px;
+}
+.t_div th,.t_div td{
+	width: 149px;
+}
+.t_div td:nth-child(7n),.t_div th:nth-child(7) {
+	width: 73px;
+}
+.t_div td:nth-child(7n) {
+	cursor: pointer;
+	background: url(../images/删除.png) no-repeat 2px 16px;
+}
+td {
+	line-height: 45px;
+}
+.video_f li {
+	margin-left: 25px;
+}
+.btn {
+	margin-left: 65px;
+}

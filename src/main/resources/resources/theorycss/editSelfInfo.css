@@ -1,0 +1,21 @@
+/*.video_f {
+	margin-bottom: 82px;
+}*/
+
+.video_f ul {
+	height: 108px;
+}
+.video_f ul li:nth-child(4),.video_f ul li:nth-child(5),.btn {
+	margin-top: 15px;
+}
+.video_f ul li:nth-child(5) {
+	margin-left: 20px;
+}
+.btn {
+	margin-left: 76px;
+}
+.del {
+	width: 100%;
+	text-align: center;
+	background-position: 60px;
+}

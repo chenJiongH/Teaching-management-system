@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生登录查询分数</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../theoryjs/swiper.min.js"></script>
+	<script type="text/javascript" src="../theoryjs/base.js"></script>
+	<script type="text/javascript" src="../theoryjs/stuQueryGrade.js"></script>
+	<script type="text/javascript" src="../theoryjs/getMultimedia.js"></script>
+	<script>
+		function videoSwiper() {
+		var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical', // 垂直切换选项
+        mousewheel: true,
+        freeMode: true,
+        slidesPerView: 4,
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+    })
+    mySwiper.scrollbar.$el.css({
+        'width': '8px',
+        'cursor': 'pointer'
+    });
+    mySwiper.scrollbar.$dragEl.css('background', 'rgb(158, 33, 33)');
+    $(".swiper-wrapper .swiper-slide").css("cursor", "pointer");
+		}
+	</script>
+	<script>
+
+        // 点击翻页之后做的操作
+        function changeSchedule() {
+            $(".left_top .turn li").removeAttr("class");
+            $(this).attr("class", "current");
+            $("input[name=curpage]").val($(this).attr("name"));
+            getSchedule();
+        }
+        // 点击翻页之后做的操作
+        function changeNotice() {
+            $(".left_bo .turn li").removeAttr("class");
+            $(this).attr("class", "current");
+            $("input[name=curpage]").val($(this).attr("name"));
+            getNotice();
+        }
+	</script>
+
+    <link rel="stylesheet" type="text/css" href="../theorycss/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/sendNews.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/stuQueryGrade.css">
+
+
+</head>
+<body>
+
+<!-- 隐藏的表单，用于下载文件 -->
+<form id="scheduleExport" method="post" enctype="multipart/form-data" action="/schedule/download" style="display: none;">
+	<input name="fileDest" >
+	<input name="fileName" >
+</form>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+			    <img src="../images/logo1.png" alt="">
+			    <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+		    </div>
+		    <a class="backMain" href="#">
+		    	<img src="../images/首页red.png">
+		        <p>返回主页</p>
+		    </a>
+		</div>
+	</div>
+	<div id="selection">
+		<p>
+			<a href="#">主页</a>
+			>
+			<a href="#">&nbsp;&nbsp;学生查询分数</a>
+		</p>
+	</div> 
+	<div id="container1">
+		<div class="content1">
+			<!--<div class="title1">
+				<p style="visibility: hidden;">
+					<span>用户名：</span>
+					<span id="nick">sdsafsd</span>
+				</p>
+				<label>学生查分页面</label>
+			</div>-->
+			<form class="video_f" style="position: relative;">
+
+				<label class="totalScore" >总分数</label>
+				<input name="curpage" style="display: none" value="1">
+				<!-- 这两个隐藏框放置学期、课程 -->
+				<input class="term" name="term" style="display: none;">
+				<input class="cname" name="cname" style="display: none;">
+				<input name="pageNumber" style="display: none" value="100">
+				<ul>
+					<li>
+						<span>学期：</span>
+						<span class="term"> </span>
+					</li>
+					<li>
+						<span>课程：</span>
+						<span class="cname"></span>
+					</li>
+					<li>
+						<span>章节名：</span>
+						<select name="pname" class="chapter"></select>
+						<img src ="../images/箭头.png">
+					</li>
+					<li style="margin-left: 15px;">
+						<span>开始时间：</span>
+						<input name="start" type="text" readonly>
+					</li>
+					<li style="">
+						<span onmouseenter="enter()">截止时间：</span>
+						<input type="text" name="end" readonly>
+					</li>
+				</ul>
+			</form>
+			<div class="leftBar">
+				<div class="left_top">
+					<div class="title">
+						<span>|</span>
+						<span>课程</span>
+						<span>资料</span>
+						<ul class="turn">
+							<li class="current" name="1"></li>
+							<li name="2"></li>
+							<li name="3"></li>
+							<li name="4"></li>
+							<li name="5"></li>
+						</ul>
+					</div>
+					<ul class="contents">
+						<li>
+							<p></p>
+						</li>
+					</ul>
+				</div>
+				<div class="left_c">
+					<div class="title">
+						<span>|</span>
+						<span>视频</span>
+						<span>列表</span>
+					</div>
+					<div class="swiper-container" >
+						<div class="swiper-wrapper">
+							<!-- 填充视频
+                            <div class="swiper-slide swiper-slide-active" style="height: 72.5px; cursor: pointer;">
+                                <video src="\lbvideo\QQ视频20200521194646.mp4"></video>
+                                <p>放置视频内容 summary</p>
+                                <span>发布时间：2019-04-04</span>
+                            </div>
+                            -->
+						</div>
+						<!-- 如果需要滚动条 -->
+						<div class="swiper-scrollbar" ></div>
+					</div>
+				</div>
+				<div class="left_bo">
+					<div class="title">
+						<span>|</span>
+						<span>最新</span>
+						<span>通知</span>
+						<ul class="turn">
+							<li class="current" name="1"></li>
+							<li name="2"></li>
+							<li name="3"></li>
+							<li name="4"></li>
+							<li name="5"></li>
+						</ul>
+					</div>
+					<ul class="contents">
+						<!-- 填充通知
+                        <li>
+                            <p>titile</p>
+                            <p>summary</p>
+                        </li>
+                        -->
+					</ul>
+				</div>
+			</div>
+			<div class="rightgrade">
+				<div class="ques">
+					<ul>
+						<li>
+							<label style="display: none">题目1</label>
+							<div class="question"></div>
+							<div class="answer"></div>
+						</li>
+					</ul>
+				</div>
+				<ul class="grade">
+					<label>分数</label>
+					<li></li>
+				</ul>
+				<ul class="sequence">
+	    	        <li class="special fontColor">上一页</li>
+	    	        <li class="current">1</li>
+	    	        <li>2</li>
+	    	        <li>3</li>
+	    	        <li>4</li>
+	    	        <li>5</li>
+	    	        <li>6</li>
+	    	        <li>7</li>
+	    	        <li>8</li>
+	    	        <li>9</li>
+	    	        <li>10</li>
+	    	        <li class="special">下一页</li>
+	            </ul>
+			</div>
+		</div>
+	</div>    
+
+	<div id="footer">
+		<div class="f_div">
+			<div class="link">
+			    常用链接：
+			    <a href="#" id="emial">校领导信箱</a>
+			    <a href="#" id="phone">校内电话</a>
+			    <a href="#" id="buy">招标采购网</a>
+			    <a href="#" id="lab">图书馆</a>
+			    <a href="#" id="fznews">福州大学报</a>
+		    </div>
+		    <div class="address">
+		    	&copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+		    </div>
+		</div>
+	</div>　　　　
+</body>
+</html>

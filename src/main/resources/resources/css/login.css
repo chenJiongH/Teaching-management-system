@@ -1,0 +1,94 @@
+.btn01 {
+	width: 850px;
+	margin: 0 auto; 
+}
+.btn01 p,.btn01 img {
+	float: left;
+}
+.btn01 a{
+	width: 200px;
+	height: 70px;
+	float: left;
+	border-radius:7px;	
+}
+.btn01 p {
+	padding-top: 5px;
+	font-size: 20px;
+}
+.btn01 img {
+	padding-right: 5px;
+}
+.t_word {
+	padding-top: 60px;
+	padding-bottom: 55px;
+	text-align: center;
+}
+.t_word p:first-child {
+	line-height: 120px;
+}
+.t_word span {
+	color: #444444;
+}
+.t_word span:first-child {
+	color: #9e2121;
+}
+.t_word p:last-child {
+	text-align: center;
+	color: #444444;
+	font-size: 37px;
+	font-weight: bold;
+}
+/*.title {
+   margin: 27px 25px -5px 25px;
+}*/
+
+/*编辑小标题开始*/
+/*.title p span{
+	font-size: 20px;
+	font-weight: bold;
+}
+.title p span:first-child,.title p span:nth-child(2) {
+	color: #381C4F;
+}
+.title p span:last-child {
+	color: #A42E2E;
+}*/
+#container {
+	background-image: url(../images/content-backgroud.png);
+    background-position: -353px -23px;
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+    z-index: 10;
+}
+
+/*按钮背景颜色*/
+a{
+	background-color: #eeeeee;
+	border-bottom: 3px solid #c8c8c8;
+	color: #9e2121;
+	box-sizing: border-box;
+}
+/*按钮的内容的位置*/
+.judge1,.manage1,.edit1,.input1,
+.upload1,.video1,.set1,.notice1,
+.edit_stuInfo1,.setQuestion1,.teacherManage1,.answer1{
+	padding:20px 15px 20px 45px;
+}
+
+
+/*六个字的按钮*/
+.editInfo .edit1,.input .input1,.upload .upload1,
+.edit_stuInfo .edit_stuInfo1,.teacherManage .teacherManage1{
+	padding-left: 22px;
+}
+/*小背景图片*/
+.footerbg {
+    height: 279px;
+    background-image: url(../images/footerbg.png) !important;
+	background-size: 100% 100%;
+    position: absolute;
+    top: 714px;
+    width: 100%;
+    z-index: -1;
+	background-repeat: no-repeat;
+}

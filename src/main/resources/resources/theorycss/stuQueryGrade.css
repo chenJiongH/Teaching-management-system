@@ -1,0 +1,308 @@
+#container1 {
+	width: 1200px;
+	height: 910px;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-bottom: 30px;
+}
+.content1 {
+	width: 1160px;
+	height: 910px;
+	margin: 0 auto;
+}
+.title1 #nick{
+	color: #912121;
+}
+.title1 p {
+	float: left;
+	width: 320px;
+}
+.title1 label {
+	width: 120px;
+	height: 25px;
+	font-weight: bold;
+	color: #912121;
+	margin-left: 200px;
+}
+.video_f {
+	width: 1163px;
+	height: 58px;
+	border-bottom: 1px solid #ededed;
+	margin-bottom: 0;
+	margin-top: 0px;
+	padding-top: 25px;
+}
+.video_f li:last-child {
+	width: unset;
+}
+.content1 .option {
+	width: 1163px;
+	height: 102px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.option li:first-child {
+	margin-left: 28px;
+}
+.option li:nth-child(2) {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.option li:nth-child(4),.option li:nth-child(5){
+	margin-top: 20px;
+}
+.option li:nth-child(5) {
+	margin-left: 25px;
+}
+.leftBar {
+	width: 320px;
+	height: 800px;
+	border-right: 1px solid #ededed;
+	margin-top: 35px;
+	float: left;
+	padding-right: 18px;
+}
+.left_top {
+	height: 190px;
+	margin-bottom: 25px;
+}
+ .contents {
+	height: 188px;
+	margin-top: 20px;
+}
+ .contents li {
+	position: relative;
+}
+ .contents li:nth-child(2n) {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+ .contents p{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+ .contents li p:first-child {
+	color: #555;
+	font-size: 16px;
+}
+ .contents li p:nth-child(2) {
+	color: #999;
+	font-size: 12px;
+}
+.contents .downL {
+	width: 43px;
+	height: 26px;
+	background: #912121 url(../images/下载-white.png) no-repeat 5px  7px;
+	position: absolute;
+	top: 0;
+	right:0;
+	text-align: right;
+	padding-right: 10px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 26px;
+	
+}
+
+
+.left_c {
+	height: 320px;
+	margin-bottom: 25px;
+}
+
+
+.swiper-container {
+	width: 320px;
+	height: 290px;
+}
+
+.swiper-wrapper  {
+	width: 320px;
+	height: 65px;
+	margin-top: 12px;
+}
+.swiper-slide video{
+	width: 90px;
+	height: 65px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+/*.swiper-slide div {
+	width: 200px;
+	height: 65px;
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-top: 2px;
+	font-size: 15px; 
+	float: right;
+}
+.swiper-wrapper .swiper-slide div p {
+	width: 200px;
+	height: 35px;
+	overflow: auto;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #555;
+}*/
+
+.turn li {
+	cursor: pointer;
+}
+.swiper-wrapper .swiper-slide p {
+	float: left;
+	width: 222px;
+	height: 37px;
+	color: #555;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.swiper-wrapper > .swiper-slide span {
+	display: block;
+	width: 300px;
+	margin-top: 47px;
+	color: #9e2121;
+	font-style: italic;
+	font-weight: lighter;
+    text-indent: 7px;
+}
+
+
+
+.left_bo {
+	height: 231px;
+}
+
+
+
+
+.rightgrade {
+	width: 803px;
+	height: 650px;
+	margin-top: 35px;
+	float: right;
+}
+.ques {
+	width: 748px;
+	height: 690px;
+	float: left;
+	position: relative;
+}
+.ques li {
+	height: 210px;
+}
+.ques label {
+	display: block;
+	font-size: 24px;
+	color: #912121;
+	font-weight: bold;
+	position: absolute;
+	right: -125px;
+}
+.ques .question {
+	height: 265px;
+	line-height: 40px;
+	overflow: auto;
+	color:#912121;
+	font-size: 15px;
+}
+.ques .answer {
+	/*padding-top: 20px;*/
+	height: 250px;
+	border-top: 1px solid #dfdfdf;
+	margin-top: 65px;
+	overflow: auto;
+	color: #777;
+	font-size: 15px;
+}
+.ques div {
+	line-height: 25px;
+}
+.ques li:nth-child(3) .answer{
+	border-bottom: 0;
+}
+
+
+.grade {
+	width: 50px;
+	height: 600px;
+	float: right;
+	margin-top: 60px;
+	color: #912121;
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+}
+.grade label {
+	display: block;
+	width: 100%;
+	height: 55px;
+}
+.grade li {
+	height: 213px;
+
+}
+.sequence {
+	margin-left: 0px;
+}
+.title .turn {
+	width: 100px;
+}
+.title .turn li {
+	float: left;
+	width: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#message {
+	right: 165px;
+	top: -43px;
+}
+.video_f input {
+	border: none;
+}
+.video_f li:first-child {
+	width: 243px;
+}
+.video_f li:nth-child(2) {
+	width: 187px;
+}
+.video_f input {
+	width: 100px
+}
+select {
+	width: 180px;
+}
+.totalScore {
+	width: 150px;
+	position: absolute;
+	top: -45px;
+	right: 0px;
+	color: #912121;
+	font-size: 23px;
+	font-weight: bold;
+}
+.video_f ul {
+	font-size: 15px;
+}
+.video_f ul li span:first-child{
+	font-size: 16px;
+	font-weight: bold;
+}
+.sequence li {
+	margin-left: 9px;
+}
+.left_top .contents p {
+	padding-left: 15px;
+	background: url('../images/下载-(12).png') no-repeat 0px 2px;
+}
+.swiper-wrapper .swiper-slide p {
+	line-height: 20px;
+    width: 195px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+}

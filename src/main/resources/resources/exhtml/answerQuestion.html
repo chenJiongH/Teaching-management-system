@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开始答题</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../exjs/base.js"></script>
+	<script type="text/javascript" src="../exjs/answerQuestion.js"></script>
+
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/dropDownList.css">
+	<link rel="stylesheet" type="text/css" href="../css/answerQuestion.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+				<img src="../images/logo.png">
+				<span>|</span>
+				<p>化学学院无机化学系</p>
+			</div>
+			<div class="info">
+				<div class="person">
+					<img src="../images/person.png">
+					<p></p>
+				</div>
+				<div class="exitLogin">
+					<img src="../images/exitLogin.png">
+					<p>退出登录</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+        <!--<label id="score">分数：<span></span></label>-->
+		<label id="message"></label>
+	    <div class="content">
+	    	<div class="t_word">
+	    		<p>您已进入答题系统，</p>
+	    		<p>请选择您要作答的课程和项目！</p>
+	    	</div>
+	    	<form class="slects">
+	    		<div class="option1">
+	    		    <span>学期：</span>
+	    	        <div class="option">
+	    			    <select name="term" id="term">
+	    			       
+	    			    </select>
+	    		    </div>
+	    	    </div>
+	    	    <div class="option1">
+	    		    <span>课程：</span>
+	    	        <div class="option">
+	    		        <select name="cname" id="cname">
+	    			        
+	    			    </select>
+	    		    </div>
+	    	    </div>
+	    	    <div class="option1">
+	    		    <span>项目：</span>
+	    	        <div class="option">
+	    		        <select name="pname" id="pname">
+	    			      
+	    			    </select>     
+	    		    </div>
+	    	    </div>
+	    	    <div class="option1">
+	    		    <span>开始时间：</span>
+	    	        <div class="optionDate">
+	    		        <input readonly name="start" id="start" >
+	    		    </div>
+	    	    </div>
+	    	    <div class="option1">
+	    		    <span>结束时间：</span>
+	    	        <div class="optionDate">
+	    			    <input readonly name="end" id="end">
+	    		    </div>
+	    	    </div>
+				<input name="onean" style="display: none;">
+				<input name="twoan" style="display: none"/>
+				<input name="threean" style="display: none;"/>
+                <button type="button" class="btn" onclick="post()">提交</button>
+	    	</form>	
+	    </div>
+	    <div class="question">
+	    	<div class="first">
+	    		<p>
+	    			<span>1</span>
+	    			<span id="onePro"></span>
+	    		</p>
+	    		<div class="area">
+	    			<textarea id="oneAn"></textarea>
+	    		</div>
+	    	</div>
+	    	<div class="second">
+	    		<p>
+	    			<span>2</span>
+	    			<span id="twoPro"></span>
+	    		</p>
+	    		<div class="area">
+	    			<textarea id="twoAn"></textarea>
+	    		</div>
+	    	</div>
+	    	<div class="third">
+	    		<p>
+	    			<span>3</span>
+	    			<span id="threePro"></span>
+	    		</p>
+	    		<div class="area">
+	    			<textarea id="threeAn"></textarea>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+	<div class="footerbg">
+	</div>
+	<div id="footer">
+		<div><p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p></div>
+	</div>
+</body>
+</html>

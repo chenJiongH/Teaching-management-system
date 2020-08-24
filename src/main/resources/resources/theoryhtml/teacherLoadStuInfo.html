@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>教师登录导入学生信息</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../theoryjs/base.js"></script>
+	<script type="text/javascript" src="../theoryjs/teacherLoadStuInfo.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/sendNews.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/loadStuInfo.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+			    <img src="../images/logo1.png" alt="">
+			    <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+		    </div>
+		    <a class="backMain" href="#">
+		    	<img src="../images/首页red.png">
+		        <p>返回主页</p>
+		    </a>
+		</div>
+	</div>
+	<div id="selection">
+		<p>
+			<a href="#">主页</a>
+			>
+			<a href="#">&nbsp;&nbsp;导入学生信息</a>
+		</p>
+	</div>  
+	<div id="curtain" class="curtain"></div>
+
+		<form action="" id="add" style="z-index: 1000;">
+			<ul>
+				<label>
+					新增学生
+					<img src="../images/关闭.png" onclick="cancel()">
+				</label>
+				<li>
+					<span>学号:</span>
+					<input type="text" name="sno" id="sno">
+				</li>
+				<li>
+					<span>姓名:</span>
+					<input type="text" name="name" id="name" style="width: 227px;text-align: left;">
+				</li>
+				<li>
+					<span>密码:</span>
+					<input type="text" name="password" id="password">
+				</li>
+				<li>
+					<span>电话:</span>
+					<input type="text" name="phone" id="phone">
+				</li>
+				<input type="text" style="display: none" name="term" >
+				<input type="text" style="display: none" name="cname" >
+				<button type="button" class="btn" onclick="post()">确认</button>
+			</ul>
+		</form>   
+	<div id="container">
+		<span id="message"></span>
+		<div class="sideBar">
+			<ul style="width: 145px;">
+				<li>
+					<a href="teacherSetProblem.html">
+					<img src="../images/zhangjiezujuan.png" alt="">
+					<span>设置章节题目</span></a>
+				</li>
+				<li>
+					<a href="teacherMark.html">
+					<img src="../images/rate.png" alt="">
+					<span>评分</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadTerm.html">
+					<img src="../images/kecheng-.png" alt="">
+					<span>上传本课程资料</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadV.html">
+					<img src="../images/视频grey.png" alt="">
+					<span>发布视频</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadNotice.html">
+					<img src="../images/通知grey.png" alt="">
+					<span>发布通知</span></a>
+				</li>
+				
+				<li>
+					<a href="teacherLoadStuInfo.html">
+					<img src="../images/xuesheng-1.png" alt="">
+					<span class="current">导入学生信息</span></a>
+				</li>
+				<li>
+					<a href="teacherEditSelfInfo.html">
+					<img src="../images/修改grey.png" alt="">
+					<span>修改个人信息</span></a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<div class="title1">导入学生信息</div>
+			<form class="video_f">
+					<input type="text" name="sno" id="sno" style="display: none;">
+					<input type="text" name="name" id="name" style="display: none;">
+					<input type="text" name="password" id="password" style="display: none;">
+					<input type="text" name="phone" id="phone" style="display: none;">
+					<li>
+						<span>学期：</span>
+						<select name="term" id="term"></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li>
+						<span>课程名：</span>
+						<select name="cname" id="cname"></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li>
+						<span>选择文件：</span>
+						<input class="file" readonly="readonly" >
+	    	  	        <input  type="file" name="file" onchange="fileChange(this)" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" ID="fileSelect" runat="server" style="display: none;">
+	    	  	        <button type='button' class="fileChoice" style="right: 4px;" onclick="fileChoice(this)">选择</button>
+					</li>
+				</ul>
+				<button type="button" class="btn" onclick="upload()">确认导入</button>
+				<button type="button" class="btn purpleBtn" onclick="postStu()">新增学生</button>
+			</form>
+			<div class="t_div">
+				<table>
+				    <tr>
+				    	<th>学号</th>
+				    	<th>姓名</th>
+				    	<th>密码</th>
+						<th>电话</th>
+				    	<th>课程</th>
+				    	<th>学期</th>
+				    	<th>操作</th>
+				    </tr>
+				   
+			   </table>
+			</div>
+			<ul class="sequence">
+	    	    <li class="special fontColor">上一页</li>
+	    	    <li class="current">1</li>
+	    	    <li>2</li>
+	    	    <li>3</li>
+	    	    <li>4</li>
+	    	    <li>5</li>
+	    	    <li>6</li>
+	    	    <li>7</li>
+	    	    <li>8</li>
+	    	    <li>9</li>
+	    	    <li>10</li>
+	    	    <li class="special">下一页</li>
+	        </ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="f_div">
+			<div class="link">
+			    常用链接：
+			    <a href="#" id="emial">校领导信箱</a>
+			    <a href="#" id="phone">校内电话</a>
+			    <a href="#" id="buy">招标采购网</a>
+			    <a href="#" id="lab">图书馆</a>
+			    <a href="#" id="fznews">福州大学报</a>
+		    </div>
+		    <div class="address">
+		    	&copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+		    </div>
+		</div>
+	</div>　　　　
+</body>
+</html>

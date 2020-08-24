@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传通知</title>
+	<link rel="stylesheet" href="../css/normalize.css">
+
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.all.min.js"> </script>
+	<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+	<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+	<script type="text/javascript" charset="utf-8" src="../utf8-jsp/lang/zh-cn/zh-cn.js"></script>
+
+	<script type="text/javascript">
+		var ue;
+        $(function ()  {
+            // 实例化编辑器
+            // 建议使用工厂方法 getEditor 创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+            ue = UE.getEditor('editor', { autoHeightEnabled: false,//设置不自动调整高度
+                autoFloatEnabled:false // 设置工具栏不浮动度 
+
+
+            });
+            ue.ready(function () {
+				$("#edui1_message_holder").css("display", "none");
+				$("#edui1_bottombar").css("display", "none");
+            });
+
+        })
+	</script>
+	<script type="text/javascript" src="../exjs/base.js"></script>
+	<script type="text/javascript" src="../exjs/loadNews.js"></script>
+	<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/dropDownList.css">
+	<link rel="stylesheet" type="text/css" href="../css/titleStyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/tableStyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/ulStyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/loadNews.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+				<img src="../images/logo.png">
+				<span>|</span>
+				<p>化学学院无机化学系</p>
+			</div>
+			<div class="info">
+				<div class="person">
+					<img src="../images/person.png">
+					<p></p>
+				</div>
+				<div class="exitLogin">
+					<img src="../images/exitLogin.png">
+					<p>退出登录</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<label id="message"></label>
+    	<div class="title">
+    		<p>
+    			<span>|</span>
+    			<span>上传</span>
+    			<span>通知</span>
+    		</p>
+    	</div>
+    	<div class="sel">
+    	  <form>
+	    	<div class="newsTitle">
+	    		<span>新闻标题:</span>
+	    	    <input name="title" type="text"  class="newsT">
+	    	</div>
+    	    <div class="newsDate">
+    	        <span>新闻时间：</span>
+				<input name="uptime" type="text" class="Wdate Wate" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})">
+	    	</div>
+			  <div class="option1" style="">
+				  <span>分类：</span>
+				  <div class="option">
+					  <select name="category" id="classify" style="float: left;">
+						  <option value="工科">工科</option>
+						  <option value="理科">理科</option>
+					  </select>
+				  </div>
+			  </div>
+	    	<input type="text" style="display: none;" name="summary">
+	    	<input type="text" name="content" style="display: none;">
+	    	<div class="newsContent">
+    	        <span>新闻内容：</span>
+    	        <div id="editor" style="width: 1047px;height: 452px;" class="newsC" ></div>
+	    	</div>
+	    	<button type="button" class="btn" onclick="post()" >上传</button>
+    	  </form>
+        </div>
+        <div class="table">
+	    	<table>
+	    		<tr>
+	    			<th>新闻标题</th>
+	    			<th>新闻时间</th>
+	    			<th>新闻内容</th>
+	    			<th>操作</th>
+	    		</tr>
+	    	</table>
+	    </div>
+	    <ul class="sequence">
+	    	<li class="special fontColor">上一页</li>
+	    	<li class="current">1</li>
+	    	<li>2</li>
+	    	<li>3</li>
+	    	<li>4</li>
+	    	<li>5</li>
+	    	<li>6</li>
+	    	<li>7</li>
+	    	<li>8</li>
+	    	<li>9</li>
+	    	<li>10</li>
+	    	<li class="special">下一页</li>
+	    </ul>
+	 </div>
+    	
+	</div>
+	<div id="footer">
+		<div><p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p></div>
+	</div>
+</body>
+</html>

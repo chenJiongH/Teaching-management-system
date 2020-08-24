@@ -1,0 +1,41 @@
+#container .content .t_word p:first-child {
+	font-size: 41px;
+}
+.content .btn01 {
+	height: 305px;
+}
+.input1 ,.upload1{
+	width: 160px;
+}
+.upload {
+	margin: 0px 117px;
+}
+.t_word {
+	padding-top: 10px;
+}
+
+/*导入学生信息按钮*/
+
+/*上传进度表*/
+
+/*上传视频*/
+.video p {
+	padding-top: 1px;
+}
+/*设置项目*/
+.set{
+	margin: 40px 0px;
+}
+/*上传通知*/
+.notice {
+	margin: 40px 117px;
+}
+/*数据维护*/
+
+/*修改学生信息*/
+
+/*设置题目*/
+.setQuestion {
+	margin: 0px 117px;
+}
+/*教师信息管理*/

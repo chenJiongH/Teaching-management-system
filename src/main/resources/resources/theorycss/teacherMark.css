@@ -1,0 +1,118 @@
+/*评分页面的下拉框*/
+.video_f ul .kecheng {
+	width: 290px;
+}
+.video_f .chapter img{
+	right: 37px;
+}
+.video_f  .btn {
+	margin-left: 53px;
+}
+/*隐藏的评分框样式*/
+#mark{
+	width: 800px;
+	height: 865px;
+	position: absolute;
+	background-color: #fff;
+	/*top :120px;*/
+	/*left:20%;*/
+	left: 50%;
+	top: 50%;
+	margin-left: -335px;
+	margin-top: -350px;
+	z-index: 111;
+	display: none;
+}
+#mark .mark{
+	width: 725px;
+	height: 655px;
+	margin: 0 auto;
+	margin-top: 35px;
+
+}
+#mark ul label{
+	display: block;
+	width: 725px;
+	height: 40px;
+	position: relative;
+	border-bottom: 1px solid #a24243;
+}
+#mark ul label img {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+#mark ul .question{
+	width: 725px;
+	margin-top: 55px;
+
+}
+#mark ul .question {
+	height: 200px;
+}
+#mark ul .question span{
+	display: inline-block;
+	width: 30px;
+	float: left;
+	color:#8c2320;
+	font-size: 28px;
+	font-weight: bold; 
+	margin-top: 15px;
+}
+#mark	ul .question > p {
+	width: 647px;
+	height: 215px;
+	overflow-x: auto;
+	overflow-y: auto;
+	color: #8c2320;
+	font-size: 16px;
+	float: left;
+	margin-top: -36px;
+}
+#mark	ul .grade{
+	width: 75px;
+	height: 80px;
+	/*background-color: #fdf6ee;*/
+	float: right;
+}
+#mark	ul .grade input {
+	width: 47px;
+	height: 25px;
+	border: 1px solid #dfdfdf;
+	margin: 15px 13px;
+}
+#mark .answer {
+	width: 650px;
+	height: 300px;
+	border-top: 1px solid #dfdfdf;
+}
+#mark .answer > p {
+	width: 623px;
+	height: 300px;
+	margin-left: 15px;
+	margin-top: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#mark .sequence{
+	height: 40px;
+	margin-top: -17px;
+	margin-left: 26px;
+}
+#mark  .btn {
+	/*margin-left: 300px; */
+	top: -729px;
+	left: 500px;
+	position: relative;
+}
+.t_div td:nth-child(6n){
+	cursor: pointer;
+	background: url(../images/删除.png) no-repeat 45px 15px;
+}
+.t_div td,.t_div th {
+	width: 160px;
+}
+#mark {
+    width: 775px;
+	height: 740px;
+}

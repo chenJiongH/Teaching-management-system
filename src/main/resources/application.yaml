@@ -1,0 +1,46 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+logging:
+  level:
+    com.example: info
+    org.springframework: info
+#    记录日志
+  file:
+    path: ./logs
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://59.77.226.132:3306/fzulabdb?useSSL=false&userUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: fzumanager
+    password: fzulbdb
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 10
+      max-lifetime: 30000
+      connection-test-query: SELECT 1
+  servlet:
+    multipart:
+      enabled: true #是否启用http上传处理
+      max-request-size: 5048MB #最大请求文件的大小
+      max-file-size: 2048MB #设置单个文件最大长度
+      file-size-threshold: 2048MB #当文件达到多少时进行磁盘写入
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations:
+    - classpath:/META-INF/resources/
+    - classpath:/static
+    - classpath:/resources/
+    - file:${file.save.location}
+    - file:///${user.dir}/static
+
+# 自定义的文件保存地址，和部署项目处于同个文件夹下
+file:
+  save:
+    location: ${user.dir}/static
+
+mybatis:
+  mapper-locations: mappers/*.xml
+  type-aliases-package: per.cjh.example.domain

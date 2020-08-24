@@ -1,0 +1,60 @@
+#container {
+	height: 1470px;
+}
+#container .content {
+	height: 1363px;
+}
+#noticeTi{
+	width: 850px;
+}
+.video_f {
+	height: 729px;
+	margin-bottom: 13px;
+}
+.video_f ul {
+	height:675px;
+	margin-bottom: 45px;
+}
+.video_f ul li:nth-child(3) {
+	width: 960px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.video_f ul li:first-child ,.video_f ul li:nth-child(2){
+	width: 353px;
+	text-align: right;
+}
+.video_f ul li:first-child span,.video_f ul li:nth-child(2) span {
+	display: inline-block;
+	width: 70px;
+}
+.video_f ul li img {
+	right: 65px;
+}
+.video_f ul li:nth-child(3) span,.video_f ul li:last-child span {
+	display: inline-block;
+}
+.video_f ul li:last-child {
+	width: 962px;
+}
+.video_f #editor {
+	float: right;
+}
+
+.btn {
+	margin-left: 72px;
+	position: absolute;
+	top: 0px;
+	right: 16px;
+}
+
+
+/*表格*/
+
+
+th:first-child,td:first-child{
+	width: 73px;
+}
+th:nth-child(2),td:nth-child(2){
+	width: 315px;
+}

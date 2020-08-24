@@ -1,0 +1,155 @@
+#container {
+	height: 1090px;
+	background-image: none;
+	margin-bottom: 15px;
+	background-color: #fefefe;
+	overflow: hidden;
+}
+#container .content {
+	height: 235px;
+}
+#message {
+	top: 100px;
+	right: 55px;
+}
+#container .content .t_word p {
+	font-size: 36px;
+	text-align: center;
+	padding-bottom: 27px;
+  
+}
+
+
+.t_word {
+	width: 770px;
+	height: 110px;
+	margin: 0px auto;
+	padding: 35px;
+}
+.t_word p:first-child {
+	color: #444444;
+}
+.t_word p:last-child {
+	color: #c40c11;
+	font-weight: bold;
+}
+
+.list {
+	width: 1201px;
+	margin-top: 30px;
+	height: 765px;
+	border-top: 15px solid #f4f4f4;	
+}
+
+.list_all {
+	width: 1130px;
+	height: 695px;
+	margin-top: 20px;
+	display: flex;
+} 
+.list .left{
+	height: 682px;
+	width: 550px;
+	margin-left: 35px;
+	margin-right: 30px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.list .left ,.list .right{
+	flex: 1;
+}
+.left table {
+	width: 500px;
+}
+
+.right {
+	width: 555px;
+	height: 690px;
+}
+
+.question {
+	color: #381c4f;
+	font-size: 15px;
+	border-top: 1px solid #e9e8e8;
+	border-bottom: 1px solid #e9e8e8;
+	padding-top: 27px;
+	padding-bottom: 19px;
+}
+.ques {
+	border-top: 0;
+	padding-top: 0px;
+}
+.question label{
+	font-size: 30px;
+	position: absolute;
+	font-weight: bold;
+}
+
+.question p {
+	margin-left: 30px;
+    margin-top: 6px;
+    height: 35px;
+	width: 525px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+/*答案*/
+.answer {
+	height: 130px;
+}
+.answer .ans p {
+    margin-top: 29px;
+    height: 70px;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.answer  .ans{
+	font-size: 15px;
+	color: #777777;
+}
+.an1{
+	padding-top: 10px;
+}
+/*得分*/
+.score {
+	width: 550px;
+	height: 70px;
+	position: relative;
+	top: -103%;
+}
+.score1{
+	width: 355px;
+}
+.score1 span {
+    display: inline-block;
+    width: 278px;
+    text-align: right;
+    float: left;
+    padding-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #9e2121;
+}
+.score1 input{
+	margin-top: 11px;
+	margin-left: 10px;
+    width: 40px;
+}
+.btn {
+    float: right;
+    margin-left: 388px;
+    margin-right: 25px;
+    margin-top: -50px;
+}
+tr {
+cursor: pointer;
+}
+
+
+

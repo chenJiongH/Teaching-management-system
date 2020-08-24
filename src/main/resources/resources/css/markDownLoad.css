@@ -1,0 +1,35 @@
+#container {
+	height: 950px;
+	background-image: none;
+	margin-bottom: 28px;
+}
+
+.btn {
+	margin-top: 30px;
+	margin-left: 75px;
+}
+.btnPurple{
+	background-color: #381c4f;
+	margin-left: 40px;
+}
+.table{
+	width: 1145px;
+	height: 500px;
+	margin:37px 30px;
+	overflow: auto;
+}
+table {
+	font-size: 15px;
+	width: 1130px;
+}
+
+td {
+	width: 188px;
+	height: 45px;
+}
+.content {
+	padding-top: 30px;
+	height: 150px;
+	border-bottom: 1px solid #e9e8e8;
+}
+

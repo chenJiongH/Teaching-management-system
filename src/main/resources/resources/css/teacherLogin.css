@@ -1,0 +1,21 @@
+#container .content .t_word p:first-child {
+	font-size: 44px;
+  
+}
+/*三个按钮*/
+.content .btn01 {
+	height: 70px;
+}	
+/*成绩评定按钮 */
+.judge1{
+	width: 125px;
+	height: 40px;
+}
+/*评分管理按钮*/
+.btn01 .manage {
+	margin: 0px 117px;
+}
+/*修改个人信息按钮*/
+
+
+

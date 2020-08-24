@@ -1,0 +1,46 @@
+#container {
+	height: 1212px;
+}
+.slects{
+	height: 80px;
+	margin-top: 30px;
+	border-bottom: 1px solid #e9e8e8;
+}
+.questions {
+	height: 295px;
+	border-bottom: 1px solid #e9e8e8;
+}
+.question1,.question2,.question3{
+	width: 755px;
+	height: 50px;
+	margin-left: 37px;
+	margin-top: 30px;
+}
+.question1 span,.question2 span,.question3 span{
+	width: 65px;
+	height: 50px;
+	line-height: 52px;
+}
+.question2 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.questions input {
+	width: 662px;
+}
+.btn {
+	margin-top: 25px;
+}
+
+table td {
+	width: 160px;
+	padding-left: 10px
+}
+tr td:nth-child(7n){
+	cursor: pointer;
+	background: url(../images/删除.png) no-repeat 44px 15px;
+}
+tr td:nth-child(4n),tr td:nth-child(5n),tr td:nth-child(6n),
+tr th:nth-child(4),tr th:nth-child(5),tr th:nth-child(6){
+	width: 185px !important;
+}

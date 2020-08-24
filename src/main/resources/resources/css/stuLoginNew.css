@@ -1,0 +1,35 @@
+.welcome {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+.name {
+    font-size: 22px;
+    color: #ff9600;
+    margin-top: 12px;
+}
+.c_login p {
+    line-height: normal;
+}
+.btn01 {
+    margin: 0 auto;
+    width: 230px;
+}
+.btn01 a {
+    background: #eeeeee;
+    width: 200px;
+    height: 70px;
+    display: block;
+    margin-top: 35px;
+    color: rgb(158, 33, 33);
+    border-radius: 7px;
+    text-align: center;
+}
+.btn01 img {
+    margin-top: 15px;
+}
+.btn01 span {
+    font-size: 20px;
+    vertical-align: super;
+}

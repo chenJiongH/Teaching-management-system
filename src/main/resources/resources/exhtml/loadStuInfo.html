@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导入学生信息</title>
+
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../exjs/base.js"></script>
+    <script type="text/javascript" src="../exjs/loadStuInfoAjax.js"></script>
+
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/dropDownList.css">
+	<link rel="stylesheet" type="text/css" href="../css/titleStyle.css">
+	<link rel="stylesheet" href="../css/tableStyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/ulStyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/loadStuInfo.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+				<img src="../images/logo.png">
+				<span>|</span>
+				<p>化学学院无机化学系</p>
+			</div>
+			<div class="info">
+				<div class="person">
+					<img src="../images/person.png">
+					<p></p>
+				</div>
+				<div class="exitLogin">
+					<img src="../images/exitLogin.png">
+					<p>退出登录</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<label id="message">1234</label>
+		<div class="title">
+	    	<p>
+	    		<span>|</span>
+	    		<span>导入</span>
+	    		<span>学生信息</span>
+	    	</p>
+	    </div>
+	    <div class="content">
+	    	<form class="slects" enctype="multipart/form-data">
+				<ul>
+					<li>
+						<div class="option1">
+							<span>学期：</span>
+							<div class="option">
+								<select name="term" id="term">
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<span>课程：</span>
+						<input placeholder="请输入课程" name="cname">
+					</li>
+					<li>
+						<span>文件名:</span>
+						<input class="fileName" style="width: 150px;padding-right: 110px;">
+                        <input  type="file" name="file" onchange="fileChange(this)" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" ID="fileSelect" runat="server" style="display: none;">
+						<button type='button' class="fileChoice" onclick="fileChoice(this)">选择</button>
+					</li>
+				</ul>
+	    	    <div class="button">
+	    	    	<button type='button' class="btn" onclick="stuImport()">导入</button>
+	    	        <button type='button' class="btn btnPurple" onclick="stuUpload()">上传</button>
+	    	    </div>
+	    	</form>
+	    </div>
+	    <div class="table">
+	    	<table>
+	    		<tr>
+	    			<th>学号</th>
+	    			<th>姓名</th>
+	    			<th>密码 </th>
+	    			<th>课程</th>
+	    			<th>学期 </th>
+	    		</tr>
+	    	</table>
+	    </div>
+	    <ul class="sequence">
+	    	<li class="special fontColor">上一页</li>
+	    	<li class="current">1</li>
+	    	<li>2</li>
+	    	<li>3</li>
+	    	<li>4</li>
+	    	<li>5</li>
+	    	<li>6</li>
+	    	<li>7</li>
+	    	<li>8</li>
+	    	<li>9</li>
+	    	<li>10</li>
+	    	<li class="special">下一页</li>
+	    </ul>
+	 </div>
+	  
+	<div id="footer">
+		<div><p>&copy;2015 福州大学地址：福建省福州市福州大学城乌龙江北大道2号邮编：350108传真：86-0591-22866099</p></div>
+	</div>
+</body>
+</html>

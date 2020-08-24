@@ -1,0 +1,145 @@
+@font-face
+{
+	font-family: newFont;
+	src: url("../fonts/newFont.TTF");
+}
+#message {
+    font-family: newFont;
+    position: absolute;
+    right: 65px;
+    top: 30px;
+    font-size: 16px;
+    font-style: italic;
+    color: #ff9409;
+	display: none;
+}
+button {
+	border-radius: 10px !important;
+}
+#container {
+    position: relative;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f4f4f4;
+}
+/*头部开始*/
+
+#header {
+	height: 100px;
+	background-color: #381c4f;
+}
+#header .top {
+	width: 1198px;
+	margin:0 auto;
+}
+#header .top .logo {
+	height: 40px;
+	padding-top: 20px;
+	font-weight: bold;
+	
+}
+#header .top .logo img{
+	height: 58px;
+	float: left;
+}
+.top .logo span,.top .logo p {
+	color: #fff;
+	font-size: 24px;
+	float: left;
+	padding-top: 18px;
+}
+.top .logo span {
+	padding: 20px;
+}
+.top .info{
+	width: 192px;
+	height: 24px;
+	float: right;
+	margin-top: -20px;
+}
+.top .info .person, .top .info .exitLogin{
+	width: 85px;
+	height: 21px;
+	color: #fff;
+}
+.top .info .person:hover, .top .info .exitLogin:hover {
+	cursor: pointer;
+}
+.top .info .person {
+	float: left;
+}
+.top .info img {
+	padding-right: 5px;
+}
+.top .info img, .top .info p{
+	float: left;
+}
+.top .info .exitLogin {
+	float: right;
+}
+.top .info .exitLogin img {
+	padding-top: 2px;
+}
+/*头部结束*/
+/*中间开始*/
+#container {
+	width: 1200px;
+	height: 874px;
+	background-color: #fefefe;
+	margin: 15px auto;
+}
+
+/*中间结束*/
+/*底部开始*/
+
+#footer {
+	height: 70px;
+	background-color: #381c4f;
+}
+#footer div {
+	width: 1198px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+#footer div p {
+	text-align: center;
+	color: #7C599A;
+	font-size: 14px;
+	margin-top: 2px;
+}
+
+/*底部结束*/
+/*按钮的设置*/
+.btn {
+	width: 120px;
+	height: 46px;
+	background-color: #9e2121;
+	color:#fff;
+	margin-left: 102px;
+	border-radius: 5px;
+}
+.btnPurple {
+	background-color: #381c4f;
+}
+.btn:hover {
+	cursor:pointer;
+}
+
+.edit_table .btn {
+	width: 120px;
+	height: 46px;
+	background-color: #9e2121;
+	color:#fff;
+}
+.edit_table .btn p {
+	height: 16px;
+	width: 30px;
+	padding: 15px 45px;
+}
+
+
+

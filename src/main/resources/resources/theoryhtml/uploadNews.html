@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员登录发送新闻</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../theoryjs/base.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/sendNews.css">
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+			    <img src="../images/logo1.png" alt="">
+			    <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+		    </div>
+		    <a class="backMain" href="#">
+		    	<img src="../images/首页red.png">
+		        <p>返回主页</p>
+		    </a>
+		</div>
+	</div>
+	<div id="selection">
+		<p>
+			<a href="#">主页</a>
+			>
+			<a href="#">&nbsp;&nbsp;新闻上传</a>
+		</p>
+	</div>     
+	<div id="container">
+		<div class="sideBar">
+			<ul>
+				<li>
+					<img src="../images/教师grey.png" alt="">
+					<span>教师信息修改</span>
+				</li>
+				<li>
+					<img src="../images/课程grey.png" alt="">
+					<span>课程信息修改</span>
+				</li>
+				<li>
+					<img src="../images/通知grey.png" alt="">
+					<span>通知上传</span>
+				</li>
+				<li>
+					<img src="../images/视频grey.png" alt="">
+					<span>视频上传</span>
+				</li>
+				<li>
+					<img src="../images/修改red.png" alt="">
+					<span class="current">新闻上传</span>
+				</li>
+				<li>
+					<img src="../images/数据grey.png" alt="">
+					<span>数据维护</span>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="title1">新闻上传</div>
+			<form class="video_f">
+				<ul>
+					<li>
+						<span>学期：</span>
+						<select></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li>
+						<span>课程名：</span>
+						<select></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li id="selectFile">
+						<span>选择文件：</span>
+						<input  class="file">
+	    	  	        <input  type="file" name="file" onchange="fileChange(this)" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" ID="fileSelect" runat="server" style="display: none;">
+	    	  	        <button type='button' class="fileChoice">选择</button>
+					</li>
+				</ul>
+				<button type="button" class="btn">确认上传</button>
+			</form>
+			<div class="t_div">
+				<table>
+				    <tr>
+				    	<th>序号</th>
+				    	<th>文件名</th>
+				    	<th>课程名</th>
+				    	<th>学期</th>
+				    	<th>操作</th>
+				    </tr>
+				    <tr>
+				    	<td>1</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>2</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>3</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>4</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>5</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>6</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>7</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>8</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>9</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>10</td>
+				    	<td>gdgf</td>
+				    	<td>fghfghgf</td>
+				    	<td>2019</td>
+				    	<td>
+				    		<div class="up">上移</div>
+				    		<div class="down">下移</div>
+				    		<div class="del">删除</div>
+				    	</td>
+				    </tr>
+			   </table>
+			</div>
+			<ul class="sequence">
+	    	    <li class="special fontColor">上一页</li>
+	    	    <li class="current">1</li>
+	    	    <li>2</li>
+	    	    <li>3</li>
+	    	    <li>4</li>
+	    	    <li>5</li>
+	    	    <li>6</li>
+	    	    <li>7</li>
+	    	    <li>8</li>
+	    	    <li>9</li>
+	    	    <li>10</li>
+	    	    <li class="special">下一页</li>
+	        </ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="f_div">
+			<div class="link">
+			    常用链接：
+			    <a href="#" id="emial">校领导信箱</a>
+			    <a href="#" id="phone">校内电话</a>
+			    <a href="#" id="buy">招标采购网</a>
+			    <a href="#" id="lab">图书馆</a>
+			    <a href="#" id="fznews">福州大学报</a>
+		    </div>
+		    <div class="address">
+		    	&copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+		    </div>
+		</div>
+	</div>　　　　
+</body>
+</html>

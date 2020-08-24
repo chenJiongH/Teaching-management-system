@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.cjh.example.mappers.LbproblemMapper">
+  <resultMap id="BaseResultMap" type="per.cjh.example.domain.Lbproblem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="term" jdbcType="VARCHAR" property="term" />
+    <id column="pname" jdbcType="VARCHAR" property="pname" />
+    <id column="cname" jdbcType="VARCHAR" property="cname" />
+    <result column="one" jdbcType="LONGVARCHAR" property="one" />
+    <result column="two" jdbcType="LONGVARCHAR" property="two" />
+    <result column="three" jdbcType="LONGVARCHAR" property="three" />
+    <result column="four" jdbcType="LONGVARCHAR" property="four" />
+    <result column="five" jdbcType="LONGVARCHAR" property="five" />
+    <result column="six" jdbcType="LONGVARCHAR" property="six" />
+    <result column="seven" jdbcType="LONGVARCHAR" property="seven" />
+    <result column="eight" jdbcType="LONGVARCHAR" property="eight" />
+    <result column="nine" jdbcType="LONGVARCHAR" property="nine" />
+    <result column="ten" jdbcType="LONGVARCHAR" property="ten" />
+    <result column="eleven" jdbcType="LONGVARCHAR" property="eleven" />
+    <result column="twelve" jdbcType="LONGVARCHAR" property="twelve" />
+    <result column="thirteen" jdbcType="LONGVARCHAR" property="thirteen" />
+    <result column="fourteen" jdbcType="LONGVARCHAR" property="fourteen" />
+    <result column="fifteen" jdbcType="LONGVARCHAR" property="fifteen" />
+  </resultMap>
+</mapper>

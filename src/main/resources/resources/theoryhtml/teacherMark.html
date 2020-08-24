@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>教师登录评分</title>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../theoryjs/base.js"></script>
+	<script type="text/javascript" src="../theoryjs/teacherMark.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../theorycss/base.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/sendNews.css">
+	<link rel="stylesheet" type="text/css" href="../theorycss/teacherMark.css">
+	
+</head>
+<body>
+	<div id="header">
+		<div class="top">
+			<div class="logo">
+			    <img src="../images/logo1.png" alt="">
+			    <p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;无机化学系理论教学系统</p>
+		    </div>
+		    <a class="backMain" href="#">
+		    	<img src="../images/首页red.png">
+		        <p>返回主页</p>
+		    </a>
+		</div>
+	</div>
+	<div id="selection">
+		<p>
+			<a href="#">主页</a>
+			>
+			<a href="#">&nbsp;&nbsp;评分</a>
+		</p>
+	</div> 
+	<!-- 背景幕布，点击增加时，幕布显示 -->
+	<div id="curtain" class="curtain"></div>
+	<form id="mark" style="z-index: 1000">
+		<ul class="mark">
+			<label>
+				评分
+				<img src="../images/关闭.png" alt="" onclick="cancel()">
+			</label>
+			<li class="question">
+				<p></p>
+				<div class="grade">
+					<input type="text" name="" autocomplete="off">
+				</div>
+			</li>
+			<li class="answer">
+				<p></p>
+			</li>
+		</ul>
+			<ul class="sequence">
+	    	    <li class="special fontColor">上一页</li>
+	    	    <li class="current">1</li>
+	    	    <li>2</li>
+	    	    <li>3</li>
+	    	    <li>4</li>
+	    	    <li>5</li>
+	    	    <li>6</li>
+	    	    <li>7</li>
+	    	    <li>8</li>
+	    	    <li>9</li>
+	    	    <li>10</li>
+	    	    <li class="special">下一页</li>
+	        </ul>
+	        <button type="button" class="btn" onclick="post()">确认评分</button>
+		
+
+	</form>    
+	<div id="container">
+		<span id="message"></span>
+	   <!-- 侧边栏  -->
+		<div class="sideBar">
+			<ul style="width: 145px;">
+				<li>
+					<a href="teacherSetProblem.html">
+					<img src="../images/zhangjiezujuan.png" alt="">
+					<span>设置章节题目</span></a>
+				</li>
+				<li>
+					<a href="teacherMark.html">
+					<img src="../images/rate1.png" alt="">
+					<span class="current">评分</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadTerm.html">
+					<img src="../images/kecheng-.png" alt="">
+					<span>上传本课程资料</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadV.html">
+					<img src="../images/视频grey.png" alt="">
+					<span>发布视频</span></a>
+				</li>
+				<li>
+					<a href="teacherUploadNotice.html">
+					<img src="../images/通知grey.png" alt="">
+					<span>发布通知</span></a>
+				</li>
+				
+				<li>
+					<a href="teacherLoadStuInfo.html">
+					<img src="../images/xuesheng-.png" alt="">
+					<span>导入学生信息</span></a>
+				</li>
+				<li>
+					<a href="teacherEditSelfInfo.html">
+					<img src="../images/修改grey.png" alt="">
+					<span>修改个人信息</span></a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="title1">评分</div>
+			<form class="video_f">
+				<ul>
+					<li>
+						<span>学期：</span>
+						<select name="term" id="term"></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li class="kecheng">
+						<span>课程名：</span>
+						<select  name="cname" id="cname"></select>
+						<img src="../images/箭头.png">
+					</li>
+					<li class="chapter">
+						<span>章节名称：</span>
+						<select name="pname" id="pname"></select>
+						<img src="../images/箭头.png">
+					</li>
+					
+				</ul>
+				<button id="query" type="button" class="btn" onclick="get()">查询测验</button>
+				<button type="button" class="btn purpleBtn" onclick="printtable()">打印报表</button>
+			</form>
+			<form id="gradeExport" method="post" action="http://47.92.68.218:8080/grade/export" style="display: none;" enctype="multipart/form-data">
+				<input name="fileDest">
+				<input name="fileName" value="成绩表">
+			</form>
+
+			<div class="t_div">
+				<table>
+				    <tr>
+				    	<th>学号</th>
+				    	<th>姓名</th>
+				    	<th>课程</th>
+				    	<th>章节</th>
+				    	<th>分数</th>
+				    </tr>
+			   </table>
+			</div>
+			<ul class="sequence">
+	    	    <li class="special fontColor">上一页</li>
+	    	    <li class="current">1</li>
+	    	    <li>2</li>
+	    	    <li>3</li>
+	    	    <li>4</li>
+	    	    <li>5</li>
+	    	    <li>6</li>
+	    	    <li>7</li>
+	    	    <li>8</li>
+	    	    <li>9</li>
+	    	    <li>10</li>
+	    	    <li class="special">下一页</li>
+	        </ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="f_div">
+			<div class="link">
+			    常用链接：
+			    <a href="#" id="emial">校领导信箱</a>
+			    <a href="#" id="phone">校内电话</a>
+			    <a href="#" id="buy">招标采购网</a>
+			    <a href="#" id="lab">图书馆</a>
+			    <a href="#" id="fznews">福州大学报</a>
+		    </div>
+		    <div class="address">
+		    	&copy; 2015 福州大学　地址：福建省福州市福州大学城乌龙江北大道2号　邮编：350108　传真：86-0591-2286609
+		    </div>
+		</div>
+	</div>　　　　
+</body>
+</html>

@@ -1,0 +1,28 @@
+#container {
+	height: 975px;
+}
+.sel {
+	width: 1200px;
+	border-bottom: 1px solid #e9e8e8;
+	height: 230px;
+}
+.slects{
+	width: 1126px;
+	height: 195px;
+	margin-top: 40px;
+	
+}
+.option1 {
+	padding-bottom: 25px;
+}
+.btn3 {
+	width: 500px;
+	height: 46px;
+}
+.btn {
+	margin-left: 76px;
+}
+table tr td:nth-child(6n){
+	cursor: pointer;
+	background: url(../images/删除.png) no-repeat 60px 14px;
+}

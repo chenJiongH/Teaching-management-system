@@ -1,0 +1,115 @@
+body {
+	background: #fff;
+}
+#selection {
+	width: 1200px;
+	height: 70px;
+	margin: 0 auto;
+	line-height: 70px;
+}
+#container {
+	width: 1200px;
+	margin: 0 auto;
+	min-height: 800px;
+	margin-bottom: 40px;
+}
+.title2 {
+	height: 30px;
+	text-align: center;
+	font-size: 26px;
+	color: #353535;
+	margin-bottom: 15px;
+}
+.info {
+	height: 45px;
+	color: #999;
+	font-size: 14px;
+	text-align: center;
+}
+#container video {
+	width: 1200px;
+	height: 680px;
+}
+.index {
+	height: 45px;
+	width: 1200px;
+	font-size: 14px;
+	color: #353535;
+	margin-bottom: 35px;
+	margin-top: 40px;
+}
+.index .last {
+	width: 1200px;
+	height: 15px;
+	margin-bottom: 15px;
+}
+.content2 {
+	padding-top: 10px;
+	width: 1200px;
+	margin-top: 15px;
+	min-height:800px;
+}
+.tilte1 {
+	height: 45px;
+	border-bottom: 1px solid #912121;
+}
+.video_f li:nth-child(2) {
+	position: relative;
+}
+.conts img {
+	display: block;
+	margin: 0 auto;
+}
+#edit {
+	height: 315px;
+}
+.video_f .btnLong {
+	width: 234px;
+}
+.video_f li:nth-child(2) button {
+	width: 90px;
+	height: 43px;
+	position: absolute;
+	top :-15px;
+	right:0px;
+
+}
+/*word阅读页面的样式*/
+.change {
+	width: 1200px;
+	height: 20px;
+	text-align: right;
+}
+.index span {
+	cursor: pointer;
+}
+.index span:hover {
+	color: #d61e1e;
+}
+.change label {
+	display: inline-block;
+    cursor: pointer;
+}
+
+.change .index1  {
+	width: 30px;
+	height: 25px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 14px;
+}
+.change span {
+	display: inline-block;
+}
+.content2 .title2 {
+	line-height: 30px;
+	font-size: 16px;
+	text-align: left;
+	padding-left: 10px;
+	border-bottom: 1px solid #ccc;
+	box-shadow: 1px 3px 3px #ccc;
+}
+.conts {
+	width: 100%;
+	height: 100%;
+}

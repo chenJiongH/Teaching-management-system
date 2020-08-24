@@ -1,0 +1,71 @@
+
+#container .query {
+	height: 158px;
+}
+#container .edit,#container .query {
+	padding: 32px 35px;
+}
+#container .edit_title {
+	padding: 33px 37px;
+	border-bottom: 1px solid #e9e8e8; 
+}
+/*编辑小标题开始*/
+.edit_title span{
+	font-size: 20px;
+	font-weight: bold;
+}
+.edit_title span:first-child {
+	font-family: "宋体";
+	color: #000;
+	font-weight: bolder;
+	padding-right: 10px;
+}
+.edit_title span:nth-child(2){
+	color: #381C4F;
+}
+.edit_title span:last-child {
+	color: #A42E2E;
+}
+/*编辑小标题结束*/
+.query p,.edit p {
+	font-size: 18px;
+}
+.query p span:first-child,.edit p {
+	font-weight: bold;
+	color: #353535;
+}
+.query p span:last-child {
+	color: #9e2121;
+	padding-left: 20px;
+
+}
+.edit {
+	height: 175px;
+}
+/*编辑表格开始*/
+.edit_table{
+	width: 1099px;
+	height: 125px;
+}
+.edit_table p {
+	font-size: 15px;
+}
+
+.edit_table input {
+	margin-top: 35px;
+	width: 262px;
+	height: 48px;
+	margin-bottom: 25px;
+	border:1px solid #dfdfdf;
+}
+
+.edit_table input[placeholder] {
+	padding-left: 10px;
+}
+.edit_table span:nth-child(2){
+	margin-left: 45px;
+	margin-right: 60px;
+}
+.edit_table .btn {
+	margin-left: 47px;
+}
