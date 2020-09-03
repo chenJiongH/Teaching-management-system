@@ -22,8 +22,8 @@ public class SendMessage {
         // regionId 区域编号-中国杭州 不用改动
         final String regionId = "cn-hangzhou";
         // 使用自己的阿里云用户账号和密码
-        String accessKeyId = "LTAI4FxRJrhaMSWfWEsNZ";
-        String accessSecret = "ckph8YpC3jN82aXythpBnPSa2MD";
+        String accessKeyId = "LTAI4EsNZ";
+        String accessSecret = "ckphpBnPSa2MD";
         DefaultProfile profile = DefaultProfile.getProfile(regionId, accessKeyId, accessSecret);
         IAcsClient client = new DefaultAcsClient(profile);
 
@@ -34,7 +34,8 @@ public class SendMessage {
         request.setAction("SendSms");
         request.putQueryParameter("PhoneNumbers", phone);
         request.putQueryParameter("SignName","课程预习系统");
-        request.putQueryParameter("TemplateCode", "SMS_186610635");
+        // 使用自己的 TemplateCode
+        request.putQueryParameter("TemplateCode", "SMS_18635");
         //用户的验证码（密码）内容
         request.putQueryParameter("TemplateParam", "{\"code\":\"" + message + "\"}");
         try {
