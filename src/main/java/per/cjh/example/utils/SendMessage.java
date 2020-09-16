@@ -23,7 +23,7 @@ public class SendMessage {
         final String regionId = "cn-hangzhou";
         // 使用自己的阿里云用户账号和密码
         String accessKeyId = "LTAI4EsNZ";
-        String accessSecret = "ckphpBnPSa2MD";
+        String accessSecret = "ckphpBnP12Sa2MD";
         DefaultProfile profile = DefaultProfile.getProfile(regionId, accessKeyId, accessSecret);
         IAcsClient client = new DefaultAcsClient(profile);
 
