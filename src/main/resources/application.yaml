@@ -12,7 +12,7 @@ logging:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://59.77.226.132:3306/fzulabdb?useSSL=false&userUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://59.77.229.211:3306/fzulabdb?useSSL=false&userUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: fzumanager
     password: fzulbdb
     hikari:
