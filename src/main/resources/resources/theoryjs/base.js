@@ -329,7 +329,7 @@ function messageShow(data) {
             lineHeight: '16px', cursor: 'pointer', borderRadius: '12px', fontFamily: '微软雅黑'
         });
 
-        $("#mb_btnbox").css({ margin: '15px 70px 15px', textAlign: 'center' });
+        $("#mb_btnbox").css({ margin: '15px 40px 15px', textAlign: 'center' });
         $("#mb_btn_ok,#mb_btn_no").css({float: 'unset', padding: 'unset', borderRadius: '5px', width: '85px', height: '30px' });
 
 
