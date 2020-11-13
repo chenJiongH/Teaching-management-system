@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 7088
   tomcat:
     uri-encoding: utf-8
 logging:
@@ -12,9 +12,9 @@ logging:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://部署数据库的服务器地址:3306/fzulabdb?useSSL=false&userUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: 数据库账号
-    password: 数据库地址
+    url: jdbc:mysql://localhost:3306/fzulabdb?useSSL=false&userUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
     hikari:
       minimum-idle: 3
       maximum-pool-size: 10
